@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Midterms</title>
+  <link rel="stylesheet" href="midterms.css" />
+  <link href="https://fonts.cdnfonts.com/css/new-super-mario-font-u" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">
+        <div id="sub-container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prelims.html">Prelims</a></li>
+                <li><a href="midterms.html">Midterms</a></li>
+                <li><a href="finals.html">Finals</a></li>
+            </ul>
+        </div>
+    </div>
+  <div class="container">
+    <div class="sub-container">
+      <div class="midterms-header">
+        <img id="header1" src="https://25.media.tumblr.com/0203de9c403a0da0ef7bf61e435cee0c/tumblr_mm7gdb53IN1re7l7wo1_r1_250.gif" alt="Mario GIF" />
+        <h1 id="blue">M</h1>
+        <h1 id="yellow">I</h1>
+        <h1 id="red">D</h1>
+        <h1 id="green">T</h1>
+        <h1 id="blue">E</h1>
+        <h1 id="yellow">R</h1>
+        <h1 id="red">M</h1>
+        <h1 id="green">S</h1>
+        <img id="header1" src="https://25.media.tumblr.com/0203de9c403a0da0ef7bf61e435cee0c/tumblr_mm7gdb53IN1re7l7wo1_r1_250.gif" alt="Mario GIF" />
+      </div>
+
+      <div class="midterms-header dropdown">
+        <img src="https://avatarfiles.alphacoders.com/352/thumb-1920-35248.gif" alt="Mushroom" class="mario-gif" />
+        <h2 id="blue1" onclick="loadPage('lecture4.html')">Lecture Page</h2>
+        <img src="https://avatarfiles.alphacoders.com/352/thumb-1920-35248.gif" alt="Mushroom" class="mario-gif" />
+      </div>
+
+      <div class="midterms-header dropdown">
+        <img src="https://avatarfiles.alphacoders.com/352/thumb-1920-35253.gif" alt="Princess Peach" class="mario-gif" />
+        <h2 id="yellow1">Activities</h2>
+        <img src="https://avatarfiles.alphacoders.com/352/thumb-1920-35253.gif" alt="Princess Peach" class="mario-gif" />
+        <div class="dropdown-content">
+          <p onclick="loadPage('midterm-activity2.html')">Activity 2</p>
+          <p onclick="loadPage('https://cip1101csadbajaerinsy2425.on.drv.tw/www.cip1101baja/CIP%201101%20ACTIVITY%203%20IMAGE%20and%20IMAGE%20MAPS/MidLect6.html')">Activity 3</p>
+          <p onclick="loadPage('MidtermHandsOnAct3.html')">Activity 4</p>
+        </div>
+      </div>
+
+      <div class="midterms-header">
+        <img src="https://avatarfiles.alphacoders.com/352/thumb-1920-35245.gif" alt="Fire Flower" class="mario-gif" />
+        <h2 id="blue1" onclick="loadPage('https://cip1101csadbajaerinsy2425.on.drv.tw/www.cip1101baja/CIP%201101%20MIDTERM%20EXAM%20HANDS-ON/MidExam.html')">Exam</h2>
+        <img src="https://avatarfiles.alphacoders.com/352/thumb-1920-35245.gif" alt="Fire Flower" class="mario-gif" />
+      </div>
+    </div>
+
+    <iframe id="contentFrame"></iframe>
+  </div>
+
+  <script>
+    function loadPage(page) {
+      const iframe = document.getElementById("contentFrame");
+      iframe.src = page;
+      iframe.style.display = "block"; 
+    }
+  </script>
+</body>
+</html>

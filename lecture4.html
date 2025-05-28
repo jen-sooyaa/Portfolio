@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 4</title>
+    <link rel="stylesheet" href="lecture4.css">
+    <link href="https://fonts.cdnfonts.com/css/new-super-mario-font-u" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/varuna" rel="stylesheet">
+</head>
+<body>
+    <div class="name-title">
+        <h1 id="blue">L</h1>
+        <h1 id="yellow">E</h1>
+        <h1 id="red">C</h1>
+        <h1 id="green">T</h1>
+        <h1 id="blue">U</h1>
+        <h1 id="yellow">R</h1>
+        <h1 id="red" style="margin-right: 15px;">E</h1>
+        <h1 id="blue">N</h1>
+        <h1 id="yellow">O</h1>
+        <h1 id="red" style="margin-right: 15px;">:</h1>
+        <h1 id="green">4</h1>
+    </div>
+    <h2 id="blue">Topic: Lists, Links, and Images</h2>
+    <h3 id="yellow"><strong>HTML Lists</strong></h3>
+    <ul>
+        <li>Making information more accessible is the single most important quality of HTML.</li>
+        <li>It helps you organize your information into documents readers can quickly understand, scan, and extract,
+            possibly with automated browser agents.</li>
+        <li>It shows specific information quickly and clearly.</li>
+            <ul style="list-style-type: disc;">
+                <li>Ordered lists &lt;ol&gt; or numbered list</li>
+                <li>Unordered list &lt;ul&gt; or bulleted list</li>
+                <li>Definition list &lt;dl&gt; or glossary lis</li>
+            </ul>
+        <li><h3 id="red"><strong>Ordered Lists &lt;OL&gt;</strong></h3></li>
+            <ul style="list-style-type: disc;">
+                <li>Are lists in which each item is numbered usually starting at 1.</li>
+                <li>It is used if you want to emphasize that the elements are ordered or has hierarchy.</li>
+                <li>Are good for set of instructions. <br>
+                    <strong>Syntax:</strong> <br><br>
+                    &lt;ol&gt; <br>
+                    &nbsp;&nbsp; &lt;li&gt; item 1&lt;/li&gt; <br>
+                    &nbsp;&nbsp; &lt;li&gt; item 2 &lt;/li&gt; <br>
+                    &lt;/ol&gt; <br><br>
+                    <strong>Syntax with CSS:</strong> <br><br>
+                    <strong>HTML</strong> <br>
+                    &lt;ol&gt; <br>
+                    &nbsp;&nbsp; &lt;li&gt;Notebook&lt;/li&gt; <br>
+                    &nbsp;&nbsp; &lt;li&gt;Ballpen&lt;/li&gt; <br>
+                    &nbsp;&nbsp; &lt;li&gt;Yellow Paper&lt;/li&gt; <br>
+                    &lt;/ol&gt; <br><br>
+                    <strong>CSS</strong> <br>
+                    li { <br>
+                    list-style-type: upper-roman; <br>
+                    } <br></li>
+            </ul> <br>
+            <p><strong>Application:</strong></p>
+            <ol style="color: rgb(161, 0, 0);">
+                <li>Notebook</li>
+                <li>Ballpen</li>
+                <li>Yellow Paper</li>
+            </ol>
+            <br>
+
+        <li>Enhancement to Numbered List</li>
+        <table>
+            <th>list-style-type</th>
+            <th>Description</th>
+            <tr>
+                <td>decimal</td>
+                <td>The list items will be numbered with numbers (default)</td>
+            </tr>
+            <tr>
+                <td>upper-alpha</td>
+                <td>The list items will be numbered with uppercase letters</td>
+            </tr>
+            <tr>
+                <td>lower-alpha</td>
+                <td>The list items will be numbered with lowercase letters</td>
+            </tr>
+            <tr>
+                <td>upper-roman</td>
+                <td>The list items will be numbered with uppercase roman number</td>
+            </tr>
+            <tr>
+                <td>lower-roman</td>
+                <td>The list items will be numbered with lowercase roman numbers</td>
+            </tr>
+        </table>
+        <br>
+        <li>Syntax of START <br><br>
+            <strong>&lt;ol type = “A” start = “5”&gt;</strong> <br>
+            (would start the numbering at letter E)</li>
+        <li><h3 id="green"><strong>Unordered List &lt;UL&gt;</strong></h3></li>
+            <ul style="list-style-type: disc;">
+                <li>You need two elements to create an unordered list (bulleted) list: <br><br>
+                    <strong>&lt;ul&gt;&lt;/ul&gt;</strong> The unordered lists element enables you to create the list</li> <br><br>
+                <li><strong>&lt;li&gt;&lt;/li&gt;</strong> You specify individual items on the list with the list item element <br>
+                    Example: <br><br>
+                    &lt;ul style="list-style-type:square"&gt; <br>
+                    &nbsp;&nbsp; &lt;li&gt;Notebook&lt;/li&gt; <br>
+                    &nbsp;&nbsp; &lt;li&gt;Ballpen&lt;/li&gt; <br>
+                    &nbsp;&nbsp; &lt;li&gt;Yellow Paper&lt;/li&gt; <br>
+                    &lt;/ul&gt; <br><br>
+                    <p><strong>Application:</strong></p>
+                    <ul style="list-style-type: square; color: rgb(161, 0, 0);">
+                        <li>Notebook</li>
+                        <li>Ballpen</li>
+                        <li>Yellow Paper</li>
+                    </ul> <br>
+
+                    Specifying the type of bullet for the entire list</li>
+                    <table>
+                        <th>Value</th>
+                        <th>Description</th>
+                        <tr>
+                            <td>disc</td>
+                            <td>Sets the list item marker to a bullet (default)</td>
+                        </tr>
+                        <tr>
+                            <td>circle</td>
+                            <td>Sets the list item marker to a circle</td>
+                        </tr>
+                        <tr>
+                            <td>square</td>
+                            <td>Sets the list item marker to a square</td>
+                        </tr>
+                        <tr>
+                            <td>none</td>
+                            <td>The list items will not be marked</td>
+                        </tr>
+                    </table>
+            </ul>
+            <br>
+        <li><h3 id="blue"><strong>Decription Lists</strong></h3></li>
+            <ul style="list-style-type: disc;">
+                <li>HTML also supports description lists.</li>
+                <li>A description list is a list of terms, with a description of each term.</li>
+                <li>The &lt;dl&gt; tag defines the description list, the &lt;dt&gt; tag defines the term (name), and the &lt;dd&gt; tag describes each term <br>
+                    Example: <br><br>
+                    &lt;dl&gt; <br>
+                    &nbsp;&nbsp; &lt;dt&gt;Notebook&lt;/dt&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;dd&gt;- a small book with blank or ruled pages for writing notes in.&lt;/dd&gt; <br>
+                    &nbsp;&nbsp; &lt;dt&gt;Ballpen&lt;/dt&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;dd&gt;- is a pen that dispenses ink over a metal ball at its point&lt;/dd&gt; <br>
+                    &lt;/dl&gt;</li>
+            </ul>
+            <p><strong>Application:</strong></p>
+            <dl style="color: rgb(161, 0, 0);">
+                <dt>Notebook</dt>
+                    <dd>- a small book with blank or ruled pages for writing notes in.</dd>
+                <dt>Ballpen</dt>
+                    <dd>- is a pen that dispenses ink over a metal ball at its point</dd>
+            </dl>
+
+        <li><h3 id="yellow"><strong>Nested List</strong></h3></li>
+            <ul style="list-style-type: disc;">
+                <li>Creating nesting list to organize information. <br><br>
+                    &lt;ul&gt; <br>
+                    &nbsp;&nbsp; &lt;li>Coffee&lt;/li&gt; <br>
+                    &nbsp;&nbsp; &lt;li&gt;Tea <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; &lt;ul&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;Black tea&lt;/li&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;Green tea&lt;/li&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt; <br>
+                    &nbsp;&nbsp;&lt;li&gt;Milk&lt;/li&gt; <br>
+                    &lt;/ul&gt;</li>
+            </ul>
+            <p><strong>Application:</strong></p>
+            <ul style="color: rgb(161, 0, 0);">
+                <li>Coffee</li>
+                    <li>Tea
+                        <ul>
+                        <li>Black tea</li>
+                        <li>Green tea</li>
+                        </ul>
+                    </li>
+                <li>Milk</li>
+            </ul>
+
+        <li><h3 id="red"><strong>Horizontal List with CSS</strong></h3></li>
+            <ul style="list-style-type: disc;">
+                <li>HTML lists can be styled in many different ways with CSS.</li>
+                <li>One popular way is to style a list horizontally, to create a navigation menu: <br><br>
+                    <strong>Insert to head tag</strong> <br><br>
+                    &lt;head&gt; <br>
+                    &lt;style&gt; <br>
+                    ul { <br>
+                    &nbsp;&nbsp; list-style-type: none; <br>
+                    &nbsp;&nbsp; margin: 0; <br>
+                    &nbsp;&nbsp; padding: 0; <br>
+                    &nbsp;&nbsp; overflow: hidden; <br>
+                    &nbsp;&nbsp; background-color: #333333; <br>
+                    } <br>
+                    li { <br>
+                    &nbsp;&nbsp; float: left; <br>
+                    } <br>
+                    li a { <br>
+                    &nbsp;&nbsp; display: block; <br>
+                    &nbsp;&nbsp; color: white; <br>
+                    &nbsp;&nbsp; text-align: center; <br>
+                    &nbsp;&nbsp; padding: 16px; <br>
+                    &nbsp;&nbsp; text-decoration: none; <br>
+                    } <br>
+                    li a:hover { <br>
+                    &nbsp;&nbsp; background-color: #111111; <br>
+                    } <br>
+                    &lt;/style&gt; <br>
+                    &lt;/head&gt;</li>
+            </ul>
+        <li><h3 id="green"><strong>Insert to Body Tag</strong></h3></li>
+            <ul style="list-style-type: disc;">
+                <li>
+                &lt;body&gt; <br>
+                &nbsp;&nbsp; &lt;ul&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#news"&gt;News&lt;/a&gt;&lt;/li&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt; <br>
+                &nbsp;&nbsp;&lt;/ul&gt; <br>
+                &lt;/body&gt;</li>
+            </ul>
+    </ul>
+    <h3 id="blue"><strong>HTML Links/Hyperlinks</strong></h3>
+        <ul>
+            <li>With links or hyperlinks, it is possible for the users / readers of the page to jump from one page to another page.</li>
+            <li>Links can be in a form of some text that is highlighted, underlined or colored blue or red. It can be also a graphic image.</li>
+            <li>Types of href Attribute Values <br>
+                <table>
+                    <th>Types of href Attribute Values</th>
+                    <th>Where the Link Jumps To</th>
+                    <tr>
+                        <td>absolute URL</td>
+                        <td>Find the resource on a different web server than the current web page.</td>
+                    </tr>
+                    <tr>
+                        <td>relative URL</td>
+                        <td>Find the resource on the same web server as the
+                            current web page. Specify the location of the resource by providing a path from the current web
+                            page’s directory to the destination web page.</td>
+                    </tr>
+                    <tr>
+                        <td>jump within current web page</td>
+                        <td>Find the resource within the current web page. Specify the location of the resource by providing
+                            an id value for an element in the web page.</td>
+                    </tr>
+                </table></li>
+        </ul>
+    <h3 id="yellow"><strong>The &lt;a&gt; Tag</strong></h3>
+        <ul>
+            <li>&lt;a&gt; means anchor, is used to create links to other documents and to name anchors for fragment identifiers
+                within documents.</li>
+            <li><strong>href</strong> is an attribute which stands for “Hypertext Reference” is used to specifies the name or URL of the file
+                where this link points.</li>
+            <li>Sample: <br><br>
+                &lt;a href= “home.html”&gt; Back to HOME &lt;/a&gt;</li>
+        </ul>
+    <h3 id="red"><strong>Absolute and Relative Links</strong></h3>
+        <ul>
+            <li>Absolute Link – a link that links you to another website <br>
+                Ex: <br><br>
+                <strong>&lt;a href=“http://google.com”&gt; Google &lt;/a&gt;</strong></li> <br>
+            <li>Relative Link – a link that links you to pages within your site <br>
+                Ex: <br><br>
+                <strong>&lt;a href=“template.htm”^gt; template &lt;/a&gt;</strong></li>
+        </ul>
+    <h3 id="green"><strong>Relative URLs</strong></h3>
+        <ul>
+            <li>A directory tree structure is where files and directories are organized.</li>
+            <li>The destination web page is the page that the user jumps to after clicking on the link.</li>
+            <li>A home page is the default first page a user sees when the user visits a website.</li>
+            <li>A subdirectory (also called a subfolder or a child folder) is a directory that is contained within another directory</li>
+            <li>In forming a path for a relative URL value you’ll need to follow these rules:</li>
+            <li><strong>Use /’s to separate directories and files.</strong></li>
+            <li><strong>Use “..” to go from a directory to the directory’s parent directory</strong></li>
+            <li><strong>&lt;a href="../index.html"&gt;Olivia's Home Page&lt;/a&gt;</strong></li>
+            <li><strong>&lt;a href="hw1/business.html"&gt;Business Page&lt;/a&gt;</strong></li>
+        </ul>
+    <h3 id="blue"><strong>User Experience Design</strong></h3>
+        <ul>
+            <li>A Linear structure means the home page links to one other page, and that second page links to one other page, and so on.</li>
+            <li>That type of strategy might be used for a website whose purpose is to present a long article.</li>
+            <li>A hierarchical structure means the home page links to several other pages where those pages serve as pseudo-
+                home pages for the different areas within the website.</li>
+            <li>A mixed structure means there’s a hierarchical structure for compartmentalizing the website’s main areas, plus
+                additional links that (1) connect from within the areas to other areas and (2) connect pages back to the
+                website’s home page.</li>
+            <li><strong>Syntax for Internal Link</strong></li>
+            <li>To jump to a designated location within the current web page, you need to use a value starting with # such that
+                that value matches an id attribute’s value for an element in the web page.</li>
+        </ul>
+    <h3 id="yellow"><strong>HTML Link Colors</strong></h3>
+        <ul>
+            <li>By default, a link will appear like this (in all browsers):</li>
+            <li>An unvisited link is underlined and blue</li>
+            <li>A visited link is underlined and purple</li>
+            <li>An active link is underlined and red</li>
+            <li>You can change the default colors, by using CSS.</li>
+            <li>In addition, links can be styled differently depending on what state they are in.</li>
+            <li>The four links states are:</li>
+            <li><strong>a:link -</strong> a normal, unvisited link</li>
+            <li><strong>a:visited -</strong> a link the user has visited</li>
+            <li><strong>a:hover -</strong> a link when the user mouse over it</li>
+            <li><strong>a:active -</strong> a link the moment it is clicked</li>
+        </ul>
+    <h3 id="red"><strong>The Target Attribute</strong></h3>
+    <p>The target attribute specifies where to open the linked document.</p>
+    <p>The target attribute can have one of the following values:</p>
+        <ul>
+            <li><strong>_blank -</strong> Opens the linked document in a new window or tab</li>
+            <li><strong>_self -</strong> Opens the linked document in the same window/tab as it was clicked (this is default)</li>
+            <li><strong>_parent -</strong> Opens the linked document in the parent frame</li>
+            <li><strong>_top -</strong> Opens the linked document in the full body of the window</li>
+            <li><strong>framename -</strong> Opens the linked document in a named frame</li>
+        </ul>
+    <p><strong>Example:</strong></p>
+        <ul>
+            <li>&lt;a href="https://www.w3schools.com/" target="_blank"&gt;Visit W3Schools!&lt;/a&gt;</li>
+            <li>&lt;a href="template.htm" target="_top"&gt;HTML5 tutorial!&lt;/a&gt;</li>
+        </ul>
+        <p><strong>Application:</strong></p>
+        <a style="color: rgb(161, 0, 0);" href="https://www.w3schools.com/html/" target="_blank">HTML Tutorial</a>
+    <h3 id="green"><strong>HTML Links - Image as Link</strong></h3>
+        <ul>
+            <li>&lt;a href=“template.htm"&gt; <br> 
+                &nbsp;&nbsp; &lt;img src=“Rudolph.jpg" alt=“rudolph" style="width:42px;height:42px;border:0;"&gt; <br>
+                &lt;/a&gt;</li>
+        </ul>
+        <p><strong>Application:</strong></p>
+        <a href="https://www.pngkey.com/png/full/980-9809169_super-mario.png" target="_blank">
+  <img src="https://www.pngkey.com/png/full/980-9809169_super-mario.png" alt="Super Mario Bros Characters" width="200">
+</a>
+
+    <h3 id="blue"><strong>External Paths</strong></h3>
+        <ul>
+            <li>External pages can be referenced with a full URL or with a path relative to the current web page.</li>
+            <li><strong>This example uses a full URL to link to a web page:</strong> <br><br>
+                &lt;a href="https://www.w3schools.com/html/html_tables.asp"&gt;HTML Table&lt;/a&gt;</li> <br>
+            <li><strong>This example links to a page located in the html folder on the current web site: <br><br></strong>
+                &lt;a href="../LECT4IMAGE/images1.html"&gt;IMAGES&lt;/a&gt;</li>
+        </ul>
+    <h3 id="yellow"><strong>Images</strong></h3>
+    <p>Comparing Graphics Formats</p>
+        <ul>
+            <li>Best graphic format suited for use on the Web</li>
+            <li><strong>WebP</strong></li>
+                <ul style="list-style-type: disc;">
+                    <li>pronounced "webpy"</li>
+                    <li>Created by Google to replace JPEG,GIF and PNG</li>
+                </ul>
+            <li><strong>GIF (Graphics Interchange Format)</strong></li>
+                <ul style="list-style-type: disc;">
+                    <li>Pronounced as “jiff”</li>
+                    <li>Best for navigation buttons; clip arts, banners, drawings or anything that has large blocks of the same
+                        color</li>
+                </ul>
+            <li><strong>JPEG (Joint Photographic Experts Group)</strong></li>
+                <ul style="list-style-type: disc;">
+                    <li>Pronounced as “jay-peg”</li>
+                    <li>Best for photos for the web</li>
+                </ul>
+            <li><strong>PNG (Portable Network Graphics)</strong></li>
+                <ul style="list-style-type: disc;">
+                    <li>Pronounce as "ping"</li>
+                    <li>Combines the best qualities of both GIF and JPEG but doesn’t have very broad browser support.</li>
+                </ul>
+        </ul>
+    <h3 id="red"><strong>Understanding Image Formats</strong></h3>
+        <ul>
+            <li><strong>GIF</strong> Graphics Interchange Format (GIF)</li> <br>
+            <li>was first developed for image transfer among users of the CompuServe online service.</li>
+            <li>Best used for flat line drawings containing solid tones and simple images such as clip art.</li>
+            <li><strong>Features:</strong></li>
+                <ul style="list-style-type: disc;">
+                    <li>Its encoding is cross-platform</li>
+                    <li>GIF uses special compression technology that can significantly reduce the size of the image file
+                        for faster transfer over a network. GIF compression is "lossless"; none of an image's original data
+                        is altered or deleted, so the uncompressed and decoded image exactly matches its original. Also,
+                        GIF images can be easily animated.</li>
+                </ul>
+            <li>The maximum number of colors in a GIF file is 256</li>
+            <li>The GIF images have a .gif file extension.</li>
+            <li>Two GIF versions: the original GIF87 and an expanded GIF89a, which supports several new features
+                including transparent backgrounds, interlaced storage, and animation that are popular with web authors.</li>
+            <li>Transparent GIF : images are great for any graphic that you want to meld into the document and not stand out
+                as a rectangular block</li>
+                <ul style="list-style-type: disc;">
+                    <li>The browser simply ignores any pixel in the image that uses that background color, thereby letting the
+                        display window's background show through. By carefully cropping its dimensions and by using a solid,
+                        contiguous background color, you can make a transparent image seamlessly meld into or float above a
+                        page's surrounding content.</li>
+                </ul>
+            <li>Interlacing: interlaced GIFs open like a Venetian blind. That's because interlacing sequences every fourth row of
+                the image. Users get to see a full image top to bottom, albeit fuzzy in a quarter of the time it takes to download
+                and display the remainder of the image. The resulting quarter-done image usually is clear enough so that users
+                with slow network connections can evaluate whether to take the time to download the remainder of the image
+                file.</li>
+            <li>Animation: special GIF-animation software utilities, you may prepare a single GIF89a file that contains a series of
+                GIF images. The browser displays each image in the file, one after the other, special control segments between
+                each image in the GIF file let you set the number of times the browser runs through the complete sequence
+                (looping).</li> <br>
+            <li><strong>JPEG</strong> Joint Photographic Experts Group (JPEG)</li>
+                <ul style="list-style-type: disc;">
+                    <li>is a standards body that developed what is now known as the JPEG image-encoding format. Like GIFs,
+                        JPEG images are platform independent and specially compressed for high-speed transfer via digital
+                        communication technologies.</li>
+                    <li>JPEG supports tens of thousands of colors for more detailed, photorealistic digital images.</li>
+                    <li>JPEG is an excellent choice for photographs, it's not a particularly good choice for illustrations.</li>
+                    <li>The JPEG format, usually designated by the .jpg (or .JPG) filename suffix</li>
+                </ul>
+            <li><strong>PNG</strong> Portable Network Graphics (PNG)</li>
+                <ul style="list-style-type: disc;">
+                    <li>PNG has a broader selection of color formats (24-bit true-color RGB, a grayscale and GIF-like 8-bit
+                        palette) and better lossless compression.</li>
+                    <li>PNG's unique and attractive features include alpha channels which let you specify many more than GIF's
+                        one layer of transparency (more than 65,000, actually) and can simulate 3D imagery, gamma correction
+                        which controls cross-platform image brightness for more vivid graphics, and two-dimensional interlacing
+                        which provides for a finer progressively developing image.</li>
+                    <li>PNG does not support animation.</li>
+                </ul>
+            <li><strong>WebP</strong> Web Picture Format</li>
+                <ul style="list-style-type: disc;">
+                    <li>WebP is natively supported in Google Chrome, Safari, Firefox, Edge, the Opera browser, and by many
+                        other tools and software libraries. Developers have also added support to a variety of image editing
+                        tools.</li>
+                    <li>Lossy and lossless compression: WebP can compress images using either lossy or lossless compression.</li>
+                    <li>Transparency: WebP supports transparency, like PNG.</li>
+                </ul>
+        </ul>
+    <h3 id="green"><strong>HTML Images</strong></h3>
+        <ul>
+            <li>Images can improve the design and the appearance of a web page. <br>
+                <strong>Images Syntax:</strong></li>
+            <li>In HTML, images are defined with the &lt;img&gt; tag.</li>
+            <li>The &lt;img&gt; tag is empty, it contains attributes only, and does not have a closing tag.</li>
+            <li>The src attribute specifies the URL (web address) of the image: <br>
+                &lt;img src="url"&gt;</li>
+        </ul>
+    <h3 id="blue"><strong>The alt Attribute</strong></h3>
+        <ul>
+            <li>The alt attribute provides an alternate text for an image, if the user for some reason cannot view it (because of
+                slow connection, an error in the src attribute, or if the user uses a screen reader)</li>
+            <li>The value of the alt attribute should describe the image.</li>
+        </ul>
+    <p><strong>Example:</strong></p>
+        <ul>
+            <li>&lt;img src=“grizzly.png" alt=“grizzly"&gt;</li>
+            <li>&lt;img src=“panda.png" alt=“panda"&gt;</li>
+            <li>&lt;img src=“polar.png" alt=“ice"&gt;</li>
+        </ul>
+        <p><strong>Application:</strong></p>
+        <a href="https://pngimg.com/d/mario_PNG1.png" target="_blank">
+        <img src="https://pngimg.com/d/mario_PNG1.png" alt="Toad" width="200">
+        </a>
+
+    <h3 id="yellow"><strong>Image Size - Width and Height</strong></h3>
+        <ul>
+            <li>You can use the style attribute to specify the width and height of an image.</li>
+        </ul>
+    <p>Example:</p>
+        <ul style="list-style-type: none;"><li>&lt;img src=“panda.png" alt=“Panda Bear" style="width:500px;height:600px;"&gt;</li></ul>
+        <p><strong>Application:</strong></p>
+        <img src="https://pngimg.com/d/mario_PNG80.png" alt="Princess Peach" width="200">
+    <h3 id="red"><strong>Images in Another Folder</strong></h3>
+        <ul>
+            <li>If not specified, the browser expects to find the image in the same folder as the web page.</li>
+            <li>However, it is common to store images in a sub-folder. You must then include the folder name in the src attribute. <br>
+                <strong>Example</strong> <br><br>
+                &lt;img src="images/circle.jpg" alt=“Circle" style="width:128px;height:128px;"&gt;</li>
+        </ul>
+    <h3 id="green"><strong>Images on Another Server</strong></h3>
+        <ul>
+            <li>Some web sites store their images on image servers.</li>
+            <li>Actually, you can access images from any web address in the world. <br>
+                Example: <br><br>
+                &lt;img src="https://www.ue.edu.ph/manila/main/misc/ccss.png" alt="UE-CCSS"&gt;</li>
+        </ul>
+    <h3 id="blue"><strong>Image as a Link</strong></h3>
+    <p>To use an image as a link, put the &lt;img&gt; tag inside the &lt;a&gt; tag:</p>
+        <ul style="list-style-type: none;"><li>&lt;a href=“template.html"&gt; <br>
+            &nbsp;&nbsp; &lt;img src=“panda.png" alt=“Lect1“ style="width:42px;height:42px;border:0;"&gt; <br>
+            &lt;/a&gt;</li></ul>
+    <h3 id="yellow"><strong>Image Floating</strong></h3>
+        <ul>
+            <li>Use the CSS float property to let the image float to the right or to the left of a text: <br>
+                <strong>Example</strong> <br><br>
+                &lt;p&gt;&lt;img src=“polar.png" alt=“Ice bear face" style="float:right;width:42px;height:42px;"&gt; <br>
+                The image will float to the right of the text.&lt;/p&gt; <br>
+                &lt;p&gt;&lt;img src=“grizzly.png" alt=“Grizzly face" style="float:left;width:42px;height:42px;"&gt; <br>
+                The image will float to the left of the text.&lt;/p&gt;</li> 
+        </ul>
+        <p><strong>Application:</strong></p>
+        <img src="https://file.aiquickdraw.com/imgcompressed/img/compressed_1f11712c9d907fafa4a8760073dab879.webp" alt="Floating Image" style="float: inline-start; width: 200px; margin: 10px;">
+
+    <h3 id="red"><strong>What is Image Map?</strong></h3>
+    <p>An <strong>image map</strong> is a way of defining "hot spot" links within an image on a Web page. This means that, rather than
+        having the whole image behave as one link, you can have lots of different links within the one image</p>
+    <h3 id="green"><strong>The Usemap Attribute</strong></h3>
+    <p>How do you turn an image into an image map? <br>
+        To associate an image map with an image, simply add the <i>usemap</i> attribute to the <i>img</i> tag for the image.</p>
+    <h3 id="blue"><strong>The Map Tag</strong></h3>
+    <p>The other half of the image map is the map definition itself. In this definition, you tell the browser where the hot
+        spots are in the image, and what the hot spots need to link to. <br>
+        <strong>Syntax</strong> <br><br>
+        &lt;map name="map-name"&gt; <br>
+        &lt;area shape="area shape" <br>
+        &nbsp;&nbsp;&nbsp;coords="area coordinates" <br>
+        &nbsp;&nbsp;&nbsp;href="area hyperlink" or nohref="nohref" <br>
+        &nbsp;&nbsp;&nbsp;target="hyperlink target" <br>
+        &nbsp;&nbsp;&nbsp;title="area title" <br>
+        alt="alternate text"/&gt; <br>
+        &lt;area shape="area shape" ... <br>
+        &lt;/map&gt;</p>
+    <h3 id="yellow"><strong>shape="rect | circle | poly | default"</strong></h3>
+    <p>Specifies the shape of the area. Possible values are:</p>
+        <ul>
+            <li>rect (a rectangular shape),</li>
+            <li>circle (a circular shape),</li>
+            <li>poly (an arbitrary polygon, with 3 or more points), or</li>
+            <li>default (which represents the remaining area of the image not defined by any area tags).</li>
+        </ul>
+    <h3 id="red"><strong>coords="area-coordinates"</strong></h3>
+    <p>Specifies the coordinates that define the corners of the shape. The coordinates depend on the shape specified in the shape attribute:</p>
+    <table>
+        <th><strong>Shape</strong></th>
+        <th><strong>coordinates</strong></th>
+        <tr>
+            <td>rect</td>
+            <td>coords="x1, y1, x2, y2" <br> (The top left and bottom right corners of the rectangle)</td>
+        </tr>
+        <tr>
+            <td>circle</td>
+            <td>coords="x, y, r" <br> (The centre and radius of the circle)</td>
+        </tr>
+        <tr>
+            <td>poly</td>
+            <td>coords="x1, y1, x2, y2, x3, y3, ..." <br> (The corners of the polygon)</td>
+        </tr>
+    </table>
+    <p>Note that all coordinate values are relative to the top left corner of the image. In other words, the top left corner always has coordinates (0, 0). <br>
+        Note also that the default shape type does not need any coordinates.</p>
+    <h3 id="green"><strong>href="area-hyperlink"</strong></h3>
+    <p>THis is the URL that you;d like to link the hot spot to. It works just like a standard &lt;a href=..&gt; tag.</p>
+    <h3 id="blue"><strong>target="hyperlink-target"</strong></h3>
+    <p>This is the optional target window or frame to open the linked URL in. Again, it works just like
+        the target attribute in a standard &lt;a href=...&gt; tag.</p>
+    <h3 id="yellow"><strong>title="area-title"</strong></h3>
+    <p>This attribute allows you to give the area a title. When the mouse is rolled over this hot spot, the browser will
+        usually pop up a tool tip displaying this title.</p>
+    <h3 id="red"><strong>Background Image</strong></h3>
+    <p>To add a background image on an HTML element, use the CSS property background-image: <br>
+        <strong>Example:</strong> <br><br>
+        &lt;body style="background-image:url('clouds.jpg')"&gt; <br>
+        &lt;h2&gt;Background Image&lt;/h2&gt; <br>
+        &lt;/body&gt;</p>
+</body>
+</html>

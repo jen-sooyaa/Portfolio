@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 5</title>
+    <link rel="stylesheet" href="lecture5.css">
+    <link href="https://fonts.cdnfonts.com/css/new-super-mario-font-u" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/varuna" rel="stylesheet">
+</head>
+<body>
+    <div class="name-title">
+        <h1 id="blue">L</h1>
+        <h1 id="yellow">E</h1>
+        <h1 id="red">C</h1>
+        <h1 id="green">T</h1>
+        <h1 id="blue">U</h1>
+        <h1 id="yellow">R</h1>
+        <h1 id="red" style="margin-right: 15px;">E</h1>
+        <h1 id="blue">N</h1>
+        <h1 id="yellow">O</h1>
+        <h1 id="red" style="margin-right: 15px;">:</h1>
+        <h1 id="green">5</h1>
+    </div>
+    <h2 id="blue">Topic: CSS3</h2>
+    <h3 id="yellow"><strong>Introduction to CSS3</strong></h3>
+    <ul>
+        <li>The principle of Cascading Style Sheets (CSS) has roots in Standardized Generalized Markup Language (SGML)
+            from the <strong>1980s</strong>. Its goals are to create a consistent look across many webpages and to separate structure from
+            presentation so you can provide different style sheets for printing, browsing, or other scenarios.</li>
+        <li>The World Wide Web Consortium (W3C) published CSS Level 1 recommendations in <strong>December 1996</strong>, and then
+            started working on CSS Level 2. (The word recommendation means a formal release of the publication.) In <strong>May
+            1998</strong>, CSS Level 2 was published, and the W3C started working on various modules of CSS Level 3 (CSS3). Rather
+            than creating one large publication for CSS3, the W3C separated CSS3 into modules that could be published
+            independently.</li>
+        <li><strong><u>In 2005</u></strong>, the W3C became stricter with enforcement of the requirements for standards, and already-published
+            standards such as CSS Level 2 Revision 1 (CSS 2.1), CSS3 Selectors, and CSS3 Text were pulled back from
+            Candidate Recommendation to Working Draft level. It wasn’t until <strong><u>June 2011</u></strong> that the CSS 2.1 recommendation
+            was published. Because CSS3 is modular, the stability of each module differs, and its status differs. More than 50
+            modules are published from the W3C’s CSS Working Group.</li>
+        <li>CSS 2.1 is included in CSS3 because CSS3 is being designed to be backward compatible with the CSS 2.1
+            recommendation. This chapter introduces you to CSS3 by covering many aspects of CSS 2.1. Cascading style
+            sheets provide a means to apply a presentation to an HTML structure by defining how HTML elements are
+            displayed. By using CSS, you can set background and foreground colors, margins, borders, fonts, positions, and
+            much more. You have creative control of the HTML elements, so you can decide what the elements look like and
+            where they display on the screen.</li>
+    </ul>
+    <h3 id="red"><strong>CSS Solved a Big Problem</strong></h3>
+    <ul>
+        <li>HTML was <strong><u>NEVER</u></strong> intended to contain tags for formatting a web page.</li>
+        <li>When tags like &lt;font&gt;, and color attributes were added to the HTML 3.2 specification, it started a nightmare for
+            web developers. Development of large websites, where fonts and color information were added to every single
+            page, became a long and expensive process.</li>
+        <li>To solve this problem, the World Wide Web Consortium (W3C) created CSS.</li>
+        <li>CSS removed the style formatting from the HTML page.</li>
+    </ul>
+    <h3 id="green"><strong>CSS Syntax and Selectors</strong></h3>
+    <p>h1 {color:blue; font-size:12px;}</p>
+    <ul>
+        <li>A CSS rule-set consists of a selector and a declaration block.</li>
+        <li>The <strong>selector</strong> points to the HTML element you want to style.</li>
+        <li>The <strong>declaration block</strong> contains one or more declarations separated by semicolons.</li>
+        <li>Each declaration includes a CSS <strong>property</strong> name and a <strong>value</strong>, separated by a <strong>colon</strong>.</li>
+        <li>A CSS declaration always ends with a <strong>semicolon</strong>, and declaration blocks are surrounded by <strong>curly braces</strong>.</li>
+    </ul>
+    <h3 id="blue"><strong>The Element Selector</strong></h3>
+    <ul>
+        <li>The element selector selects elements based on the element name.</li>
+        <li>You can select a &lt;p&gt; elements on a page like this (in this case, all &lt;p&gt; elements will be center-aligned, with a red text color): <br><br>
+            p { <br>
+                &nbsp;&nbsp;text-align: center; <br>
+                &nbsp;&nbsp;color: red; <br>
+            }</li>
+    </ul>
+    <h3 id="yellow"><strong>The id Selector</strong></h3>
+    <ul>
+        <li>The id selector uses the id attribute of an HTML element to select a specific element.</li>
+        <li>The id of an element should be unique within a page, so the id selector is used to select one unique element!</li>
+        <li>To select an element with a specific id, write a hash (#) character, followed by the id of the element.</li>
+        <li>The style rule below will be applied to the HTML element with id="para1": <br><br>
+            #para1 { <br>
+            &nbsp;&nbsp;text-align: center; <br>
+            &nbsp;&nbsp;color: red; <br>
+            }</li>
+    </ul>
+    <h3 id="red"><strong>The Class Selector</strong></h3>
+    <ul>
+        <li>The class selector selects elements with a specific class attribute.</li>
+        <li>To select elements with a specific class, write a period (.) character, followed by the name of the class.</li>
+        <li>In the example below, all HTML elements with class="center" will be red and center-aligned: <br><br>
+            .center { <br>
+            &nbsp;&nbsp;text-align: center; <br>
+            &nbsp;&nbsp;color: red; <br>
+            }</li>
+    </ul>
+    <h3 id="green"><strong>Grouping Selectors</strong></h3>
+    <ul>
+        <li>If you have elements with the same style definitions, like this: <br><br>
+            h1, h2, p { <br>
+            &nbsp;&nbsp;text-align: center; <br>
+            &nbsp;&nbsp;color: red; <br>
+            }</li>
+    </ul>
+    <h3 id="blue"><strong>CSS Comments</strong></h3>
+    <ul>
+        <li>Comments are used to explain the code, and may help when you edit the source code at a later date.</li>
+        <li>Comments are ignored by browsers.</li>
+        <li>A CSS comment starts with /* and ends with */. Comments can also span multiple lines: <br><br>
+            p { <br>
+            &nbsp;&nbsp;color: red; <br>
+            /* This is a single-line comment */ <br>
+            &nbsp;&nbsp;text-align: center; <br>
+            } <br>
+            /* This is <br>
+            a multi-line <br>
+            comment */</li>
+    </ul>
+    <h3 id="yellow"><strong>Three Ways to Insert CSS</strong></h3>
+    <ul>
+        <li>There are three ways of inserting a style sheet:</li>
+            <ul style="list-style-type: disc;">
+                <li>External style sheet</li>
+                <li>Internal style sheet</li>
+                <li>Inline style</li>
+            </ul>
+    </ul>
+    <h3 id="red"><strong>External Style Sheet</strong></h3>
+    <ul>
+        <li>With an external style sheet, you can change the look of an entire website by changing just one file! <br><br>
+            &lt;link rel="stylesheet" href="name-of-external-file"&gt;</li> <br>
+        <li>Note the rel="stylesheet" attribute-value pair. rel stands for “relationship,” and its value
+            tells the browser engine what to do with the href file. Having a rel value of stylesheet tells the
+            browser engine to look for CSS rules in the href file and apply them to the current web page.</li>
+        <li>Each page must include a reference to the external style sheet file inside the &lt;link&gt; element. The &lt;link&gt; element
+            goes inside the &lt;head&gt; section: <br><br>
+            &lt;head&gt; <br>
+            &lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt; <br>
+            &lt;/head&gt; <br>
+            body { <br>
+            &nbsp;&nbsp; background-color: lightblue; <br>
+            } <br>
+            h1 { <br>
+            &nbsp;&nbsp; color: navy; <br>
+            &nbsp;&nbsp; margin-left: 20px; <br>
+            }</li>
+    </ul>
+    <h3 id="green"><strong>Internal Style Sheet</strong></h3>
+    <ul>
+        <li>An internal style sheet may be used if one single page has a unique style.</li>
+        <li>Internal styles are defined within the &lt;style&gt; element, inside the &lt;head&gt; section of an HTML page: <br><br>
+            &lt;head&gt; <br>
+            &lt;style&gt; <br>
+            body { <br>
+            &nbsp;&nbsp;background-color: linen; <br>
+            } <br>
+            h1 { <br>
+            &nbsp;&nbsp;color: maroon; <br>
+            &nbsp;&nbsp;margin-left: 40px; <br>
+            } <br>
+            &lt;/style&gt; <br>
+            &lt;/head&gt;</li>
+    </ul>
+    <h3 id="blue"><strong>Inline Styles</strong></h3>
+    <ul>
+        <li>An inline style may be used to apply a unique style for a single element.</li>
+        <li>To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS
+            property.</li>
+        <li>The example below shows how to change the color and the left margin of a &lt;h1&gt; element: <br><br>
+            &lt;h1 style="color:blue;margin-left:30px;"&gt;This is a heading&lt;/h1&gt;</li>
+    </ul>
+    <h3 id="yellow"><strong>Cascading Order</strong></h3>
+    <ul><li>What style will be used when there is more than one style specified for an HTML element?</li></ul>
+    <table>
+        <th>Places Where CSS Rules Can Be Defined, Highest to Lowest Priority</th>
+        <tr>
+            <td>In an element’s style attribute.</td>
+        </tr>
+        <tr>
+            <td>In a style element in the web page’s head section.</td>
+        </tr>
+        <tr>
+            <td>In an external file.</td>
+        </tr>
+        <tr>
+            <td>In the settings defined by a user for a particular browser installation.</td>
+        </tr>
+        <tr>
+            <td>In the browser’s native default settings.</td>
+        </tr>
+    </table>
+    <h3 id="red"><strong>CSS Colors</strong></h3>
+    <ul>
+        <li>Background Color</li>
+        <ul style="list-style-type: disc;"><li><strong>&lt;h1 style="background-color:DodgerBlue;"&gt;Hello World&lt;/h1&gt;</strong></li></ul>
+        <li>Text Color</li>
+        <ul style="list-style-type: disc;"><li><strong>&lt;h1 style="color:Tomato;"&gt;Hello World&lt;/h1&gt;</strong></li></ul>
+        <li>Border Color</li>
+        <ul style="list-style-type: disc;"><li><strong>&lt;h1 style="border:2px solid DodgerBlue;"&gt;Hello World&lt;/h1&gt;</strong></li></ul>
+    </ul>
+    <h3 id="green"><strong>Color Values</strong></h3>
+    <ul>
+        <li>In HTML, colors can also be specified using</li>
+        <ul style="list-style-type: disc;">
+            <li>RGB values <strong>rgb(red, green, blue),</strong></li>
+            <li>HEX values <strong>#rrggbb,</strong></li>
+            <li>HSL values <strong>hsl(hue, saturation, lightness),</strong></li>
+            <li>RGBA values <strong>rgba(red, green, blue, alpha),</strong> and</li>
+            <li>HSLA values <strong>hsla(hue, saturation, lightness, alpha)</strong></li>
+        </ul>
+    </ul>
+    <h3 id="blue"><strong>RGB Values for Color</strong></h3>
+    <ul>
+        <li>RGB stands for red, green, and blue. An RGB value specifies the amounts of red, green, and blue that mix
+            together to form the displayed color. To specify an amount of a color, you can use a percentage, an integer, or
+            a hexadecimal number: <br><br>
+            percentage—0% to 100% for each color
+            integer—0 to 255 for each color
+            hexadecimal—00 to ff for each color</li> <br>
+        <li>The rgba() specifier has been added to allow the alpha, or opacity amount, to be set with a color. Just like rgb(),
+            the first three parameters set red, green, and blue amounts, and are values ranging from 0 to 255. A fourth
+            parameter, the alpha, is a floating point value from 0 to 1 where 0 is completely transparent and 1 is
+            completely opaque. The following declares a red background color that is 50 percent transparent: <br><br>
+            background-color: rgba(255, 0, 0, 0.5);</li>
+    </ul>
+    <h3 id="yellow"><strong>HSL and HSLA</strong></h3>
+    <ul>
+        <li>CSS3 also supports <strong>HSL</strong> colors, which stands for <strong>Hue</strong>, <strong>Saturation</strong>, and
+            <strong>Lightness</strong>. HSL is based on a color wheel that is full color at the edges and
+            fades to gray in the center. Now extend the wheel into a cylinder that is
+            black at the bottom, white at the top, and full color in the middle.</li>
+        <li>It is specified using hsl(h, s, l). <strong>Hue</strong> is a value from 0 to 360 that maps to
+            the degrees on the color wheel. 0 is red, 120 is green, 240 is blue, and
+            360 is back around to red. <strong> Saturation</strong> is the percentage of color where 0%
+            is completely gray and 100% full color. <strong>Lightness</strong> is the percent of
+            lightness where 0% is black, 50% is full color, and 100% is white</li>
+    </ul>
+    <h3 id="red"><strong>CSS Backgrounds</strong></h3>
+    <ul>
+        <li>The CSS background properties are used to define the background effects for elements.</li>
+        <li>CSS background properties:</li>
+        <ul style="list-style-type: disc;">
+            <li>background-color</li>
+            <li>background-image</li>
+            <li>background-repeat</li>
+            <li>background-attachment</li>
+            <li>background-position</li>
+        </ul>
+    </ul>
+    <p>Example:</p>
+    <ul>
+        <li>body { <br>
+            background-image: url("img_tree.png"); <br>
+            background-repeat: no-repeat; <br>
+            background-position: right top; <br>
+            background-attachment: fixed; <br>
+                }</li>
+    </ul>
+    <h3 id="green"><strong>Background - Shorthand property</strong></h3>
+    <ul>
+        <li>To shorten the code, it is also possible to specify all the background properties in one single property. This is
+            called a <strong>shorthand property</strong>.</li>
+        <li>The shorthand property for background is background: <br><br>
+            <strong>body { <br>
+            background: #ffffff url("img_tree.png") no-repeat right top; <br>
+            }</strong></li>
+    </ul>
+    <h3 id="blue"><strong>CSS Borders</strong></h3>
+    <ul>
+        <li>The CSS border properties allow you to specify the style, width, and color of an element's border.</li>
+        <li>The <strong>border-style</strong> property specifies what kind of border to display.</li>
+        <li>The following values are allowed:</li>
+        <ul style="list-style-type: disc;">
+            <li><strong>dotted -</strong> Defines a dotted border</li>
+            <li><strong>dashed -</strong> Defines a dashed border</li>
+            <li><strong>solid -</strong> Defines a solid border</li>
+            <li><strong>double -</strong> Defines a double border</li>
+            <li><strong>groove - </strong> Defines a 3D grooved border. The effect depends on the border-color value</li>
+            <li><strong>ridge -</strong> Defines a 3D ridged border. The effect depends on the border-color value</li>
+            <li><strong>inset -</strong> Defines a 3D inset border. The effect depends on the border-color value</li>
+            <li><strong>outset -</strong> Defines a 3D outset border. The effect depends on the border-color value</li>
+            <li><strong>none -</strong> Defines no border</li>
+            <li><strong>hidden -</strong> Defines a hidden border</li>
+        </ul>
+    </ul>
+    <p>Example:</p>
+    <ul>
+        <li>p.dotted {border-style: dotted;} <br>
+            p.dashed {border-style: dashed;} <br>
+            p.solid {border-style: solid;} <br>
+            p.double {border-style: double;} <br>
+            p.groove {border-style: groove;}</li>
+    </ul>
+    <h3 id="yellow"><strong>Border Width</strong></h3>
+    <ul>
+        <li>The <strong>border-width</strong> property specifies the width of the four borders.</li>
+        <li>The width can be set as a specific size (in px, pt, cm, em, etc) or by using one of the three pre-defined values:
+            thin, medium, or thick.</li>
+        <li>The border-width property can have from one to four values (for the top border, right border, bottom border,
+            and the left border).</li>
+    </ul>
+    <h3 id="red"><strong>Border Color</strong></h3>
+    <ul>
+        <li>The <strong>border-color</strong> property is used to set the color of the four borders.</li>
+        <li>The color can be set by:</li>
+        <ul style="list-style-type: disc;">
+            <li>name - specify a color name, like "red"</li>
+            <li>Hex - specify a hex value, like "#ff0000"</li>
+            <li>RGB - specify a RGB value, like "rgb(255,0,0)"</li>
+            <li>transparent</li>
+        </ul>
+        <li>The border-color property can have from one to four values (for the top border, right border, bottom border,
+            and the left border).</li>
+    </ul>
+    <h3 id="green"><strong>Border - Individual Sides</strong></h3>
+    <ul>
+        <li>In CSS, there are also properties for specifying each of the borders (top, right, bottom, and left): <br><br>
+            <strong>p { <br>
+                border-top-style: dotted; <br>
+                border-right-style: solid; <br>
+                border-bottom-style: dotted; <br>
+                border-left-style: solid; <br>
+                }</strong></li>
+    </ul>
+    <h3 id="blue"><strong>Border - Shorthand Property</strong></h3>
+    <ul>
+        <li>The border property is a shorthand property for the following individual border properties:</li>
+        <ul style="list-style-type: disc;">
+            <li>border-width</li>
+            <li>border-style (required)</li>
+            <li>border-color</li>
+        </ul>
+        <li><strong>
+            p { <br>
+            border: 5px solid red; <br>
+            }</strong></li>
+    </ul>
+    <h3 id="yellow"><strong>Left Border</strong></h3>
+    <ul>
+        <li><strong>
+            p { <br>
+            border-left: 6px solid red; <br>
+            background-color: lightgrey; <br>
+            }
+        </strong></li>
+    </ul>
+    <h3 id="red"><strong>Bottom Border</strong></h3>
+    <ul><li>
+        <strong> 
+            p { <br>
+            border-bottom: 6px solid red; <br>
+            background-color: lightgrey; <br>
+            }
+        </strong>
+    </li></ul>
+    <h3 id="green"><strong>Rounded Borders</strong></h3>
+    <ul>
+        <li>The <strong>border-radius</strong> property is used to add rounded borders to an element: <br><br>
+            p { <br>
+            border: 2px solid red; <br>
+            border-radius: 5px; <br>
+            }</li>
+    </ul>
+    <h3 id="blue"><strong>CSS Height and Width</strong></h3>
+    <ul>
+        <li>The height and width properties are used to set the height and width of an element.</li>
+        <li>The height and width can be set to auto (this is default. Means that the browser calculates the height and width),
+            or be specified in length values, like px, cm, etc., or in percent (%) of the containing block.</li>
+    </ul>
+    <h3 id="yellow"><strong>Setting max-width</strong></h3>
+    <ul>
+        <li>The <strong>max-width</strong> property is used to set the maximum width of an element.</li>
+        <li>The max-width can be specified in length values, like px, cm, etc., or in percent (%) of the containing block, or set
+            to none (this is default. Means that there is no maximum width).</li>
+    </ul>
+</body>
+</html>

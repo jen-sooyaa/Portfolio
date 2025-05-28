@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 3</title>
+    <link rel="stylesheet" href="lecture3.css">
+    <link href="https://fonts.cdnfonts.com/css/new-super-mario-font-u" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/varuna" rel="stylesheet">
+
+</head>
+<body>
+    <div class="name-title">
+        <h1 id="blue">L</h1>
+        <h1 id="yellow">E</h1>
+        <h1 id="red">C</h1>
+        <h1 id="green">T</h1>
+        <h1 id="blue">U</h1>
+        <h1 id="yellow">R</h1>
+        <h1 id="red" style="margin-right: 15px;">E</h1>
+        <h1 id="blue">N</h1>
+        <h1 id="yellow">O</h1>
+        <h1 id="red" style="margin-right: 15px;">:</h1>
+        <h1 id="green">3</h1>
+    </div>
+    <h2 id="blue">Topic: Lists and Tables</h2>
+
+    <h3 id="yellow"><strong>HTML STYLES</strong></h3>
+    <ul>
+        <li>The HTML style attribute is used to add styles to an element, such as color, font, size, and more.</li>
+        <li>The HTML style attribute has the following syntax: <br>
+            &lt;tagname style="property:value;"&gt;</li>
+    </ul>
+    <h3><strong>Background Color</strong></h3>
+    <ul>
+        <li>The CSS background-color property defines the background color for an HTML element. <br>
+            Example: <br>
+            &lt;body style=“background-color:DarkTurquoise;”&gt;</li> <br>
+        <li>Set background color for two different elements: <br>
+            &lt;h1 style="background-color:cyan;"&gt;This is a heading&lt;/h1&gt; <br>
+            &lt;p style="background-color:tomato;"&gt;This is a paragraph.&lt;/p&gt;</li>
+    </ul>
+    <h3><strong>Text Color</strong></h3>
+    <ul>
+        <li>The CSS color property defines the text color for an HTML element: <br>
+            Examples: <br>
+            &lt;h1 style="color:red;"&gt;This is a heading&lt;/h1&gt; <br>
+            &lt;p style="color:blue;"&gt;This is a paragraph.&lt;/p&gt;</li>
+    </ul>
+    <h3><strong>Fonts</strong></h3>
+    <ul>
+        <li>The CSS font-family property defines the font to be used for an HTML element. <br>
+            Examples: <br>
+            &lt;h1 style="font-family:verdana;"&gt;This is a heading&lt;/h1&gt; <br>
+            &lt;p style="font-family:courier;"&gt;This is a paragraph.&lt;/p&gt;</li>
+    </ul>
+    <h3><strong>Text Size</strong></h3>
+    <ul>
+        <li>The CSS font-size property defines the text size for an HTML element. <br>
+            Examples: <br>
+            &lt;h1 style="font-size:300%;"&gt;This is a heading&lt;/h1&gt; <br>
+            &lt;p style="font-size:30pt;"&gt;This is a paragraph.&lt;/p&gt;</li>
+    </ul>
+    <h3><strong>Text Alignment</strong></h3>
+    <ul>
+        <li>The CSS text-align property defines the horizontal text alignment for an HTML element: <br>
+            Examples: <br>
+            &lt;h1 style="text-align:center;"&gt;Centered Heading&lt;/h1&gt; <br>
+            &lt;p style="text-align:center;"&gt;Centered paragraph.&lt;/p&gt;</li>
+    </ul>
+    <h3 id="red"><strong>HTML TABLES</strong></h3>
+    <h3 id="green"><strong>Defining an HTML Table</strong></h3>
+    <ul>
+        <li>An HTML table is defined with the &lt;table&gt; tag</li>
+        <li>Each table row is defined with the &lt;tr&gt; tag. A table header is defined with the &lt;th&gt; tag. By default, table headings
+            are bold and centered. A table data/cell is defined with the &lt;td&gt; tag.</li>
+        <li>Table tags are used to organize information into rows and columns.</li>
+        <li>The information that you can include within the table can be a text, images, videos and so on. <br>
+            Example: <br>
+            &lt;table style="width:100%"&gt; <br>
+            &nbsp;&nbsp; &lt;tr&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt;Firstname&lt;/th&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt;Lastname&lt;/th&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt;Age&lt;/th&gt; <br>
+            &nbsp;&nbsp; &lt;/tr&gt; <br>
+            &nbsp;&nbsp; &lt;tr&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Nicole&lt;/td&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Pascual&lt;/td&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;18&lt;/td&gt; <br>
+            &nbsp;&nbsp; &lt;/tr&gt; <br>
+            &nbsp;&nbsp; &lt;tr&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Allen&lt;/td&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;Ramirez&lt;/td&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;18&lt;/td&gt; <br>
+            &nbsp;&nbsp; &lt;/tr&gt; <br>
+            &lt;/table&gt;</li>
+    </ul>
+    <table>
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Nicole</td>
+        <td>Pascual</td>
+        <td>18</td>
+    </tr>
+    <tr>
+        <td>Allen</td>
+        <td>Ramirez</td>
+        <td>18</td>
+    </tr>
+    </table>
+    <br>
+    <h3 id="blue"><strong>HTML Table - Adding a Border</strong></h3>
+    <ul>
+        <li>If you do not specify a border for the table, it will be displayed without borders.</li>
+        <li>A border is set using the CSS border property: <br><br>
+            table, th, td { <br>
+            border: 1px solid black; <br>
+            }</li>
+    </ul>
+    <h3 id="yellow"><strong>HTML Table - Collapsed Borders</strong></h3>
+    <ul>
+        <li>If you want the borders to collapse into one border, add the CSS border-collapse property: <br><br>
+            table, th, td { <br>
+            border: 1px solid black; <br>
+            border-collapse: collapse; <br>
+            }</li>
+    </ul>
+    <h3 id="red"><strong>HTML Table - Adding Cell Padding</strong></h3>
+    <ul>
+        <li>Cell padding specifies the space between the cell content and its borders.</li>
+        <li>If you do not specify a padding, the table cells will be displayed without padding.</li>
+        <li>To set the padding, use the CSS padding property: <br><br>
+            th, td { <br>
+            padding: 15px; <br>
+            }</li>
+    </ul>
+    <h3 id="green"><strong>HTML Table - Left-align Headings</strong></h3>
+    <ul>
+        <li>By default, table headings are bold and centered.</li>
+        <li>To left-align the table headings, use the CSS text-align property: <br><br>
+            th { <br>
+            text-align: left; <br>
+            }</li>
+    </ul>
+    <h3 id="blue"><strong>HTML Table - Adding Border Spacing</strong></h3>
+    <ul>
+        <li>Border spacing specifies the space between the cells.</li>
+        <li>To set the border spacing for a table, use the CSS border-spacing property: <br><br>
+            table { <br>
+            border-spacing: 5px; <br>
+            }</li>
+    </ul>
+    <h3 id="yellow"><strong>Cells that Span Many Columns</strong></h3>
+    <ul>
+        <li>To make a cell span more than one column, use the colspan attribute: <br><br>
+            &lt;table style="width:100%"&gt; <br>
+            &nbsp;&nbsp; &lt;tr&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt;Company Name&lt;/th&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;th colspan="2"&gt;Telephone&lt;/th&gt; <br>
+            &nbsp;&nbsp; &lt;/tr&gt; <br>
+            &nbsp;&nbsp; &lt;tr&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;The Travel Club&lt;/td&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;(02) 332-7183&lt;/td&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;(02) 815-7418&lt;/td&gt; <br>
+            &nbsp;&nbsp; &lt;/tr&gt; <br>
+            &lt;/table&gt;</li>
+    </ul>
+    <table> 
+    <tr>
+        <th>Company Name</th>
+        <th colspan="2">Telephone</th>
+    </tr>
+    <tr>
+        <td>The Travel Club</td>
+        <td>(02) 332-7183</td>
+        <td>(02) 815-7418</td>
+    </tr>
+    </table>
+    <br>
+    <h3 id="red"><strong>Cells that Span Many Rows</strong></h3>
+    <ul>
+        <li>To make a cell span more than one row, use the rowspan attribute: <br><br>
+            &lt;table style="width:100%"&gt; <br>
+            &nbsp;&nbsp; &lt;tr&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;th&gt;Company Name:&lt;/th&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt;The Travel Club&lt;/td&gt; <br>
+            &nbsp;&nbsp; &lt;/tr&gt; <br>
+            &nbsp;&nbsp; &lt;tr&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;th rowspan="2"&gt;Telephone:&lt;/th&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt; (02) 332-7183 &lt;/td&gt; <br>
+            &nbsp;&nbsp; &lt;/tr&gt; <br>
+            &nbsp;&nbsp; &lt;tr&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;td&gt; (02) 815-7418 &lt;/td&gt; <br>
+            &nbsp;&nbsp; &lt;/tr&gt; <br>
+            &lt;/table&gt;</li>
+    </ul>
+    <table>
+    <tr>
+        <th>Company Name:</th>
+        <td>The Travel Club</td>
+    </tr>
+    <tr>
+        <th rowspan="2">Telephone:</th>
+        <td>(02) 332-7183</td>
+    </tr>
+    <tr>
+        <td>(02) 815-7418</td>
+    </tr>
+    </table>
+
+</body>
+</html>

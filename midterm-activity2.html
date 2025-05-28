@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm Activity 2 Lists</title>
+    <link href="https://fonts.cdnfonts.com/css/new-super-mario-font-u" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/varuna" rel="stylesheet">
+    <style>
+        li, ol, ul {
+            font-family: 'VARUNA', sans-serif;
+        }
+        body {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        h1, h2, h3 {
+            font-family: 'New Super Mario Font U', sans-serif;
+        }
+
+        .name-title {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        #blue, #yellow, #red, #green {
+            display: flex;
+            align-items: center;
+            font-family: 'New Super Mario Font U', sans-serif;
+            font-size: 30px;
+            margin-top: 5px;
+            -webkit-text-stroke: 0.5px black; 
+        }
+
+        #blue { 
+            color: blue; }
+        #yellow { 
+            color: yellow; }
+        #red { 
+            color: red; }
+        #green { 
+            color: green; }
+
+        .rom { 
+            list-style-type: upper-roman; 
+        }
+        .low-rom { 
+            list-style-type: lower-roman; 
+        }
+        .circle { 
+            list-style-type: circle;
+        }
+        .square { 
+            list-style-type: square; 
+        }
+        .disc {
+            list-style-type: disc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Baja, Erin Jasmine C.</h1>
+    <div class="name-title">
+        <h1 id="blue">L</h1>
+        <h1 id="yellow">I</h1>
+        <h1 id="red">S</h1>
+        <h1 id="green">T</h1>
+        <h1 id="blue">S</h1>
+    </div>
+    <ol>
+        <li>Main Topic 1
+            <ol class="rom">
+                <li>Topic 1</li>
+                <li>Topic 2
+                    <ul class="circle">
+                        <li>Subtopic 1
+                            <ul class="square">
+                                <li>Mini Topic 1</li>
+                                <li>Mini Topic 2</li>
+                                <li>Mini Topic 3</li>
+                            </ul>
+                        </li>
+                        <li>Subtopic 2</li>
+                    </ul>
+                </li>
+                <li>Topic 3
+                    <ol class="low-rom">
+                        <li>Subtopic 1</li>
+                        <li>Subtopic 2
+                            <ul class="disc">
+                                <li>Mini Topic 1</li>
+                                <li>Mini Topic 2</li>
+                            </ul>
+                        </li>
+                        <li>Subtopic 3</li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li>Main Topic 2</li>
+        <li>Main Topic 3
+            <ul class="square">
+                <li>Mini Topic 1</li>
+                <li>Mini Topic 2</li>
+                <li>Mini Topic 3</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>

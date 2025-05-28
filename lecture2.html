@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 2</title>
+    <link rel="stylesheet" href="lecture2.css">
+    <link href="https://fonts.cdnfonts.com/css/new-super-mario-font-u" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/varuna" rel="stylesheet">
+
+</head>
+<body>
+    <div class="name-title">
+        <h1 id="blue">L</h1>
+        <h1 id="yellow">E</h1>
+        <h1 id="red">C</h1>
+        <h1 id="green">T</h1>
+        <h1 id="blue">U</h1>
+        <h1 id="yellow">R</h1>
+        <h1 id="red" style="margin-right: 15px;">E</h1>
+        <h1 id="blue">N</h1>
+        <h1 id="yellow">O</h1>
+        <h1 id="red" style="margin-right: 15px;">:</h1>
+        <h1 id="green">2</h1>
+    </div>
+    <h2 id="blue">Topic: HTML Structures</h2>
+    <h3 id="yellow"><strong>What is HTML?</strong></h3>
+    <ul>
+        <li><strong>HTML (Hypertext Markup Language)</strong> is not a programming language. It is a markup language that tells web
+            browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer
+            wants it to be.</li>
+    </ul>
+    <br>
+    <h3 id="red"><strong>Goals of HTML5</strong></h3>
+    <ul>
+        <li>Support all existing web pages. With HTML5, there is no requirement to go back and revise older websites.</li>
+        <li>Reduce the need for external plugins and scripts to show website content.</li>
+        <li>Improve the semantic definition (i.e. meaning and purpose) of page elements.</li>
+        <li>Make the rendering of web content universal and independent of the device being used.</li>
+        <li>Handle web documents errors in a better and more consistent fashion.</li>
+    </ul>
+    <br>
+    <h3 id="green"><strong>New Elements in HTML5</strong></h3>
+    <table>
+        <tr>
+            <td>&lt;article&gt;</td>
+            <td>&lt;figcaption&gt;</td>
+            <td>&lt;progress&gt;</td>
+        </tr>
+        <tr>
+            <td>&lt;aside&gt;</td>
+            <td>&lt;footer&gt;</td>
+            <td>&lt;section&gt;</td>
+        </tr>
+        <tr>
+            <td>&lt;audio&gt;</td>
+            <td>&lt;header&gt;</td>
+            <td>&lt;source&gt;</td>
+        </tr>
+        <tr>
+            <td>&lt;canvas&gt;</td>
+            <td>&lt;hgroup&gt;</td>
+            <td>&lt;svg&gt;</td>
+        </tr>
+        <tr>
+            <td>&lt;datalist&gt;</td>
+            <td>&lt;mark&gt;</td>
+            <td>&lt;time&gt;</td>
+        </tr>
+        <tr>
+            <td>&lt;figure&gt;</td>
+            <td>&lt;nav&gt;</td>
+            <td>&lt;video&gt;</td>
+        </tr>
+    </table>
+    <br>
+    <h3 id="blue"><strong>&lt;!DOCTYPE html&gt;</strong></h3>
+    <ul>
+        <li>The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the
+            HTML page had to follow to be considered good HTML.</li>
+        <li>This declaration defines that this document is an HTML5 document</li>
+        <li><strong>&lt;html&gt;&lt;/html&gt;</strong> This element wraps all the content on the page. It is sometimes known as the root element.</li>
+        <li><strong>&lt;head&gt;&lt;/head&gt;</strong> This element acts as a container for everything you want to include on the HTML page, that <strong>isn't the content</strong> the page will show to viewers.</li>
+        <li><strong>&lt;meta charset="utf-8"&gt;</strong> This element specifies the character set for your document to UTF-8, which includes
+            most characters from the vast majority of human written languages.</li>
+        <li><strong>&lt;title&gt;&lt;/title&gt;</strong> This sets the title of the page, which is the title that appears in the browser tab the page is loaded in.
+            The page title is also used to describe the page when it is bookmarked.</li>
+        <li><strong>&lt;body&gt;&lt;/body&gt;</strong> This contains <strong>all the content</strong> that displays on the page, including text, images, videos, games,
+            playable audio tracks, or whatever else.</li>
+    </ul>
+    <br>
+    <h3 id="yellow">Four Key Concepts</strong></h3>
+    <ol>
+        <li><strong><u>Elements:</u></strong> all HTML pages are made up of elements. Think of an element as a container in which a portion of a
+            page is placed. <br> <strong>Ex:</strong> &lt;h1&gt;Text Here&lt;/h1&gt;</li> <br>
+        <li><strong><u>Tags:</u></strong> is an HTML codes that are enclosed in angle brackets and are used to format the text. <br> <strong>Ex:</strong> &lt;p&gt;</li>
+    </ol>
+    <h3 id="red">Empty HTML Elements</strong></h3>
+    <ul>
+        <li>HTML elements with no content are called empty elements.</li>
+        <li>&lt;br&gt; is an empty element without a closing tag (the &lt;br&gt; tag defines a line break)</li>
+    </ul>
+    <ol start="3">
+        <li><strong><u>Attributes and Values:</u></strong></li>
+    </ol>
+    <ul>
+        <li>Attribute is used to define the characteristics of an element and is placed inside the elements opening tag. <br>
+            Ex: align attribute of paragraph. <br>
+            &lt;p align=“”&gt;This is a paragraph&lt;/p&gt;</li>
+        <li>Values work together with attributes to complete the definition of an element’s characteristics. <br>
+            - An attribute names a characteristic; a value describes it.</li>
+    </ul>
+    <ol start="4">
+        <li><strong><u>Nesting:</u></strong></li>
+    </ol>
+    <ul>
+        <li>Often, you will want to apply more than one element to a portion of your page.</li>
+        <li>Nesting simply means that elements must never overlap.</li>
+        <li>Although HTML, can be pretty forgiving if your elements are not properly nested, if you overlap
+            elements when you are working on more complicated constructions such as frames or tables, your page
+            might not display properly. <br>
+            Ex: <strong>&lt;p align= “center”&gt;&lt;h1&gt;Incorrect&lt;/p&gt;&lt;/h1&gt;</strong></li>
+    </ul>
+    <h3 id="green"><strong>HTML Is Not Case Sensitive</strong></h3>
+    <ul>
+        <li>HTML tags are <strong>not case sensitive</strong>: &lt;P&gt; means the same as &lt;p&gt;.</li>
+        <li>The HTML5 standard does not require lowercase tags, but W3C recommends lowercase in HTML, and
+            demands lowercase for stricter document types like XHTML.</li>
+    </ul>
+    <h3 id="blue"><strong>Add Comments to your HTML document</strong></h3>
+    <ul>
+        <li>Comments function as little notes to yourself.</li>
+        <li>Comments are represented through <br>
+            <strong>&lt;! --Add your Comment Here--&gt;</strong></li>
+        <li>Comments are not displayed in the browser; they are sometimes called non printing lines.</li>
+    </ul>
+    <h3 id="yellow"><strong>HTML5 Semantic Elements</strong></h3>
+    <ul>
+        <li>Semantics is the study of the meanings of words and phrases in a language.</li>
+        <li>Semantic elements = elements with a meaning.</li>
+        <li>A semantic element clearly describes its meaning to both the browser and the developer.</li>
+        <li>Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.</li>
+        <li>Examples of semantic elements: &lt;form&gt;, &lt;table&gt;, and &lt;article&gt; - Clearly defines its content.</li>
+        <li>Many web sites contain HTML code like: <br>
+            &lt;div id="nav"&gt; <br>
+            &lt;div class="header"&gt; <br>
+            &lt;div id="footer"&gt; &nbsp;&nbsp;&nbsp;to indicate navigation, header, and footer.</li>
+        <li>HTML5 offers new semantic elements to define different parts of a web page: <br>
+            &lt;article&gt; &nbsp;&nbsp;&nbsp; &lt;aside&gt; <br>
+            &lt;details&gt; &nbsp;&nbsp;&nbsp; &lt;figcaption&gt; <br>
+            &lt;figure&gt; &nbsp;&nbsp;&nbsp;&nbsp; &lt;footer&gt; <br>
+            &lt;header&gt; &nbsp;&nbsp;&nbsp; &lt;main&gt; <br>
+            &lt;mark&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;nav&gt; <br>
+            &lt;section&gt; &nbsp;&nbsp; &lt;summary&gt; <br>
+            &lt;time&gt; </li>
+        <br>
+        <li><strong>HTML5 &lt;section&gt; Element</strong></li>
+            <ul style="list-style-type: square;">
+                <li>The &lt;section&gt; element defines a section in a document.</li>
+                <li>According to W3C's HTML5 documentation: "A section is a thematic grouping of content, typically with a
+                    heading."</li>
+                <li>A home page could normally be split into sections for introduction, content, and contact information. <br>
+                    &lt;section&gt; <br>
+                    &nbsp;&nbsp;&nbsp; &lt;h1&gt;WWF&lt;/h1&gt; <br>
+                    &nbsp;&nbsp;&nbsp; &lt;p&gt;The World Wide Fund for Nature (WWF) is....&lt;/p&gt; <br>
+                    &lt;/section&gt;</li>
+            </ul>
+        <br>
+        <li><strong>HTML5 &lt;article&gt; Element</strong></li>
+            <ul style="list-style-type: square;">
+                <li>The &lt;article&gt; element specifies independent, self-contained content.</li>
+                <li>An article should make sense on its own, and it should be possible to read it independently from the rest of the
+                    web site.</li>
+                <li>Examples of where an &lt;article&gt; element can be used:</li>
+                    <ul style="list-style-type: square;">
+                        <li>Forum post</li>
+                        <li>Blog post</li>
+                        <li>Newspaper article</li>
+                        <li>
+                            &lt;article&gt; <br>
+                            &nbsp;&nbsp;&nbsp; &lt;h1&gt;What Does WWF Do?&lt;/h1&gt; <br>
+                            &nbsp;&nbsp;&nbsp; &lt;p&gt;WWF's mission is to stop the degradation of our planet's ....p&gt; <br>
+                            &lt;/article&gt;</li>
+                    </ul>
+            </ul>
+        <li>You will also find pages with &lt;section&gt; elements containing &lt;section&gt; elements, and &lt;article&gt; elements
+            containing &lt;article&gt; elements.</li>
+        <li>Example for a newspaper:</li>
+            <ul style="list-style-type: square;">
+                <li>The sport &lt;article&gt; in the sport section, may have a technical section in each &lt;article&gt;.</li>
+            </ul>
+        <br>
+        <li><strong>HTML5 &lt;header&gt; Element</strong></li>
+            <ul style="list-style-type: square;">
+                <li>The &lt;header&gt; element specifies a header for a document or section.</li>
+                <li>The &lt;header&gt; element should be used as a container for introductory content.</li>
+                <li>You can have several &lt;header&gt; elements in one document.</li>
+            </ul>
+        <li>&lt;article&gt; <br>
+            &nbsp;&nbsp; &lt;header&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;h1&gt;What is aBook?&lt;/h1&gt; <br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;Bookp&gt; <br>
+            &nbsp;&nbsp; &lt;/header&gt; <br>
+            &nbsp;&nbsp; &lt;p&gt;A book is...&gt; <br>
+            &lt;/article&gt;</li>
+        <br>
+        <li><strong>HTML5 &lt;footer&gt; Element</strong></li>
+            <ul style="list-style-type: square;">
+                <li>The &lt;footer&gt; element specifies a footer for a document or section.</li>
+                <li>A &lt;footer&gt; element should contain information about its containing element.</li>
+                <li>A footer typically contains the author of the document, copyright information, links to terms of use, contact
+                    information, etc.</li>
+                <li>You may have several &lt;footer&gt; elements in one document.</li>
+                <li>&lt;footer&gt; <br>
+                    &nbsp;&nbsp;&nbsp; &lt;p&gt;Posted by: Hege Refsnes&lt;/p&gt; <br>
+                    &nbsp;&nbsp;&nbsp; &lt;p&gt;Contact information: &lt;a href="mailto:someone@example.com"&gt; <br>
+                    &nbsp;&nbsp;&nbsp; someone@example.com&lt;/a&gt;.&lt;/p&gt; <br>
+                    &lt;/footer&gt;</li>
+            </ul>
+        <br>
+        <li><strong>HTML5 &lt;nav&gt; Element</strong></li>
+            <ul style="list-style-type: square;">
+                <li>The &lt;nav&gt; element defines a set of navigation links.</li>
+                <li>Notice that NOT all links of a document should be inside a &lt;nav&gt; element. The &lt;nav&gt; element is intended only
+                    for major block of navigation links.</li>
+                <li>&lt;nav&gt; <br>
+                    &nbsp;&nbsp;&nbsp; &lt;a href="/html/"&gt;HTML&lt;/a&gt; | <br>
+                    &nbsp;&nbsp;&nbsp; &lt;a href="/css/"&gt;CSS&lt;/a&gt; | <br>
+                    &nbsp;&nbsp;&nbsp; &lt;a href="/js/"&gt;JavaScript&lt;/a&gt; | <br>
+                    &nbsp;&nbsp;&nbsp; &lt;a href="/jquery/"&gt;jQuery&lt;/a&gt; <br>
+                    &lt;/nav&gt;</li>
+            </ul>
+        <br>
+        <li><strong>HTML5 &lt;aside&gt; Element</strong></li>
+            <ul style="list-style-type: square;">
+                <li>The &lt;aside&gt; element defines some content aside from the content it is placed in (like a sidebar).</li>
+                <li>The &lt;aside&gt; content should be related to the surrounding content.</li>
+                <li>&lt;What is a Book?&lt;/p&gt; <br>
+                    &lt;aside&gt; <br>
+                    &nbsp;&nbsp;&nbsp; &lt;h4&gt;Book&lt;/h4&gt; <br>
+                    &nbsp;&nbsp;&nbsp; &lt;A book is a medium for...&lt;/p&gt; <br>
+                    &lt;/aside&gt;</li>
+            </ul>
+        <br>
+        <li><strong>HTML5 &lt;figure&gt; and &lt;figcaption&gt; Elements</strong></li>
+            <ul style="list-style-type: square;">
+                <li>The purpose of a figure caption is to add a visual explanation to an image.</li>
+                <li>In HTML5, an image and a caption can be grouped together in a &lt;figure&gt; element.</li>
+                <li>The &lt;img&gt; element defines the image, the &lt;figcaption&gt; element defines the caption.</li>
+                <li>&lt;figure&gt; <br>
+                    &nbsp;&nbsp;&nbsp; &lt;img src=“panda.png" alt=“Panda"&gt; <br>
+                    &nbsp;&nbsp;&nbsp; &lt;figcaption&gt;Fig1. – This is Panda&lt;/figcaption&gt; <br>
+                    &lt;/figure&gt;</li>
+            </ul>
+    </ul>
+    <h3 id="red"><strong>Removed Elements in HTML5</strong></h3>
+    <ul><li>The following HTML4 elements have been removed in HTML5:</li></ul>
+        <div id="removed">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Removed</strong> &nbsp;&nbsp;&nbsp;&nbsp; <strong>Use Instead</strong> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Element</strong> <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;acronym&gt; &nbsp;&nbsp;&nbsp; &lt;abbr&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;applet&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;object&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;basefont&gt; &nbsp;&nbsp;&nbsp; CSS <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;big&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSS <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;center&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSS <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;dir&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ul&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;font&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSS <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;frame&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;frameset&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;noframes&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;strike&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSS, &lt;s&gt;, or &lt;del&gt; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;tt&gt; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CSS<br>
+        </div>
+    <h3 id="green"><strong>Controlling Text and Text Flows</strong></h3>
+    <h3 id="blue"><strong>Designate Headings with &lt;h#&gt;&lt;/h#&gt;</strong></h3>
+    <ul>
+        <li>The purpose of the heading element is to indicate different heading levels in a document.</li>
+        <li>The tag are made up of h with level of 1-6 following it. One(1) will be the largest and six(6) will be the smallest <br>
+            &lt;h1&gt;Heading 1&lt;/h1&gt; <br>
+            &lt;h2&gt;Heading 2&lt;/h2&gt; <br>
+            &lt;h3&gt;Heading 3&lt;/h3&gt; <br>
+            &lt;h4&gt;Heading 4&lt;/h4&gt; <br>
+            &lt;h5&gt;Heading 5&lt;/h5&gt; <br>
+            &lt;h6&gt;Heading 6&lt;/h6&gt;</li>
+    </ul>
+    <hr>
+    <h3 id="yellow"><strong>Insert Ruler Lines with &lt;hr&gt;</strong></h3>
+    <ul>
+        <li>The <strong><i>horizontal rule</i></strong> element, &lt;hr&gt;, will draw a horizontal line wherever you place it.</li>
+        <li>The &lt;hr&gt; element is used to separate content (or define a change) in an HTML page</li>
+    </ul>
+    <hr>
+    <h3 id="red"><strong>Control Text with Character Elements</strong></h3>
+    <ul>
+        <li>The character elements give you some basic controls over how text will display on a Web browser.</li>
+        <li>Physical elements describe the physical appearance of the characters. <br>
+            Ex: <b>&lt;b&gt;A bold text&lt;/b&gt; </b> </li>
+        <li>Elements that derive their names from the intended function or purpose of the text is called Logical Element. <br>
+            Ex: <strong>&lt;strong&gt;A strong text&lt;/strong&gt; </strong></li>
+        <li>This element will display bold typeface, but the element’s name stands for strongly emphasized text.</li>
+    </ul>
+    <h3 id="green"><strong>Display Italicized Text</strong></h3>
+    <p>Six different elements of displaying italicized text with distinct purpose:</p>
+    <ul>
+        <li><strong><u>&lt;i&gt;&lt;/i&gt;</u></strong> The italics element is a physical element for displaying italicized text. <br>
+            Ex. This is an <i>italicized</i> word.</li>
+        <li><strong><u>&lt;em&gt;&lt;/em&gt;</u></strong> The emphasis element is a logical element for emphasizing important portions of a document. <br>
+            Ex. This is <em>emphasized</em> text.</li>
+        <li><strong><u>&lt;cite&gt;&lt;/cite&gt;</u></strong> The citation element identifies a portion of your document as a reference to an outside source. <br>
+            Ex. She referenced <cite>Romeo and Juliet</cite> in her essay.</li>
+        <li><strong><u>&lt;var&gt;&lt;/var&gt;</u></strong> The logical element indicates a variable, as might be used in computer code. <br>
+            Ex. The value of <var>x</var> determines the result.</li>
+        <li><strong><u>&lt;dfn&gt;&lt;/dfn&gt;</u></strong> This logical element identifies a portion of text as defining instance of a term. <br>
+            Ex. <dfn>BSCS</dfn> stands for Bachelor of Science in Computer Science.</li>
+        <li><strong><u>&lt;address&gt;&lt;/address&gt;</u></strong> To set apart your address or personal information at the bottom of a Web page. This
+            element also generally adds a line break before and after the address. <br>
+            Ex. <address> 
+                Erin Baja<br>
+                123 Cornelia St.<br>
+                erinbaja@example.com
+                </address></li>
+    </ul>
+    <h3 id="blue"><strong>Display Boldface Text</strong></h3>
+    <ul>
+        <li><strong><u>&lt;b&gt;&lt;/b&gt;</u></strong> The bold element is a physical element that allows you to render boldface text.</li>
+        <li><strong><u>&lt;strong&gt;&lt;/strong&gt;</u></strong> The strong also displays in bold.</li>
+        <li>This logical element indicates a heavier or stronger emphasis than does &lt;b&gt;, but there is usually no difference in
+            how the two look in the browser.</li>
+    </ul>
+    <h3 id="yellow"><strong>Display Highlighted Text</strong></h3>
+    <ul>
+        <li><strong>&lt;mark&gt;&lt;/mark&gt;</strong> element defines marked/highlighted text. <br>
+            Ex. My Favorite food is <mark>Sinigang.</mark></li>
+    </ul>
+    <h3 id="red"><strong>Display Deleted Text</strong></h3>
+    <ul>
+        <li><strong>&lt;del&gt;&lt;/del&gt;</strong> element defines deleted/removed text. <br>
+            Ex. This item was <del>₱500</del> now only ₱299!</li>
+    </ul>
+    <h3 id="green"><strong>Create Superscripts and Subscripts</strong></h3>
+    <ul>
+        <li><strong><u>&lt;sup&gt;&lt;/sup&gt;</u></strong> This element creates a superscript. <br>
+            Ex. Area of a square is: A = s<sup>2</sup></li>
+        <li><strong><u>&lt;sub&gt;&lt;/sub&gt;</u></strong> This element forces text to display as a subscript. <br>
+            Ex. Water's chemical formula is H<sub>2</sub>O.</li>
+    </ul>
+    <h3 id="blue"><strong>Display Monospaced Text</strong></h3>
+    <ul>
+        <li><strong>&lt;code&gt;&lt;/code&gt;</strong> This logical element not only displays in a courier, fixed width-font font, but also indicates that
+            the text is a portion of computer code. <br>
+            Ex. Use the <code>print()</code> function in Python.</li>
+        <li><strong>&lt;kbd&gt;&lt;/kbd&gt;</strong> Standing for keyboard, this logical element identifies its contents as keyboard input. <br>
+            Ex. Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save your work.</li>
+        <li><strong>&lt;samp&gt;&lt;/samp&gt;</strong> This is another logical element. It describe its content as sample output, most often rendering
+            text in monospaced font. <br> 
+            Ex. Output: <samp>Hello, World!</samp></li>
+    </ul>
+    <h3 id="yellow"><strong>Display Underlined Text</strong></h3>
+    <ul>
+        <li><strong><u>&lt;u&gt;&lt;/u&gt;</u></strong> The underline element will render text with a line underneath. <br>
+            Ex. <u>Erin Jasmine Carlos Baja</u></li>
+        <li><strong><u>&lt;ins&gt;&lt;/ins&gt;</u></strong> The inserted text element is a logical element that indicates text that has been inserted since the
+            document was written. <br>
+            Ex. The price is now <ins>₱299.</ins></li>
+    </ul>
+    <h3 id="red"><strong>Create Line Breaks with &lt;br/&gt; and Paragraphs with &lt;p&gt;</strong></h3>
+    <ul>
+        <li>The difference between the line break and the paragraph elements is that...</li>
+        <li>when you use &lt;br&gt; you’re telling a browser to insert a line break and go to the next line.</li>
+        <li>The &lt;p&gt; element on the other hand, will add a blank line before it starts your new paragraph.</li>
+    </ul>
+    <h3 id="green"><strong>Indent Text</strong></h3>
+    <ul>
+        <li>When you want indent text in a word processor, just press the TAB key.</li>
+        <li>In HTML, it’s NOT that SIMPLE.</li>
+        <li>Web browsers ignore normal text formatting instructions; you have to be creative to indent text.</li>
+    </ul>
+    <h3 id="blue"><strong>Use &amp;nbsp; to add spaces</strong></h3>
+    <ul>
+        <li>The non breaking space <strong>entity</strong> (&amp;nbsp;) will instruct a browser to add spaces wherever you want them.</li>
+        <li>It is most commonly used to create an indent at the beginning of a paragraph.</li>
+        <li>If you want to have a five-space indent at the beginning of the paragraph, type five nonbreaking space entities at
+            the beginning of the line you want to indent.</li>
+    </ul>
+    <h3 id="yellow"><strong>HTML Entities</strong></h3>
+    <ul>
+        <li>Are reserved characters in HTML.</li>
+        <li>A character entity looks like his: <br>
+            &entity_name; or &# entity_name;</li>
+    </ul>
+    <h3 id="red"><strong>Common HTML Entities</strong></h3>
+    <table>
+        <th><Strong>Result</Strong></th>
+        <th><Strong>Description</Strong></th>
+        <th><Strong>Entity Name</Strong></th>
+        <tr>
+            <td>&nbsp;</td>
+            <td>non-breaking space</td>
+            <td>&amp;nbsp;</td>
+        </tr>
+        <tr>
+            <td>&lt;</td>
+            <td>less than</td>
+            <td>&amp;lt;</td>
+        </tr>
+        <tr>
+            <td>&gt;</td>
+            <td>greater than</td>
+            <td>&amp;gt;</td>
+        </tr>
+        <tr>
+            <td>&amp;</td>
+            <td>ampersand</td>
+            <td>&amp;amp;</td>
+        </tr>
+        <tr>
+            <td>&quot;</td>
+            <td>double quotation mark</td>
+            <td>&amp;quot;</td>
+        </tr>
+        <tr>
+            <td>&apos;</td>
+            <td>single quotation mark (ampersand)</td>
+            <td>&amp;apos;</td>
+        </tr>
+        <tr>
+            <td>&copy;</td>
+            <td>copyright</td>
+            <td>&amp;copy;</td>
+        </tr>
+        <tr>
+            <td>&reg;</td>
+            <td>registered trademark</td>
+            <td>&amp;reg;</td>
+        </tr>
+        <tr>
+            <td>&#47;</td>
+            <td>forward slash</td>
+            <td>&amp;#47;</td>
+        </tr>
+    </table>
+    <br>
+    <h3 id="green"><strong>Use &lt;blockquote&gt; to Indent a Large Block</strong></h3>
+    <blockquote>In today's fast-paced world, technology plays a pivotal role in shaping our daily lives. 
+        The advent of smartphones and the internet has revolutionized the way we communicate, access information, 
+        and conduct business. Social media platforms have connected people across the globe, fostering a sense of global 
+        community and enabling the rapid dissemination of news and ideas. However, this increased connectivity also brings 
+        challenges such as privacy concerns and the spread of misinformation. As we continue to integrate technology into 
+        our lives, it becomes essential to strike a balance between convenience and security. Education systems have also 
+        evolved, incorporating digital tools to enhance learning experiences and accessibility. Online courses and virtual 
+        classrooms have made education more inclusive, breaking down geographical barriers and providing opportunities for 
+        lifelong learning. Moreover, advancements in artificial intelligence and automation are transforming various 
+        industries, leading to increased efficiency and productivity. Nevertheless, these technological advancements raise 
+        ethical questions about the future of work and the potential displacement of jobs. As we navigate this digital era, 
+        it is crucial to remain mindful of the impact technology has on society and work towards creating a sustainable, 
+        equitable future for all. </blockquote>
+
+    <h3 id="blue"><strong>Retain Text Formatting with &lt;pre&gt;&lt;/pre&gt;</strong></h3>
+    <pre>
+        [Intro]
+        Yeah, yeah, yeah, yeah, yeah, yeah
+        Yeah, yeah-yeah, yeah-yeah-yeah-yeah-yeah-yeah (Four-by–)
+        
+        [Chorus]
+        Four-by-four, I tint my windows up (Windows up), yeah
+        Damn, lil' bro, he did it, one-and-done (One-and–, one-and-done), yeah
+        Out my closet, that shit none-of-none (None-of-none), yeah
+        That's a vibe, that's a one-of-one (Vibe), yeah
+        Fill her tongue (Tongue), yeah, make you numb, can you run? Can you come?
+        Girl, fuck the sun, find the moon, find somе fun (Fun)
+        Yeah, hella fumes in thе room, one-of-none (One), yeah, yeah, yeah
+        
+        [Verse 1]
+        Like a pro
+        Not a rook', bend your back, touch your toes (Yeah)
+        Hit a batch, take the sack, can you roll? (Yeah)
+        You my Xanax, I relax, take control (Ooh)
+        Rio get 'em back, they too close (They too close)
+        Ain't no watchin' me, no in the scope (In the scope)
+        Fix your energy, your inner soul (Inner soul)
+        Do you love me? Man, I need to know (Need to know, need to, need to, need)
+        
+        [Chorus]
+        Four-by-four, I tint my windows up (Need to), yeah
+        Damn, lil' bro, he did it, one-and-done (One-and–, one-and-), yeah
+        Out my closet, that shit none-of-none (None-of-none), yeah
+        That's a vibe, that's a one-of-one (One-of-), yeah
+        Fill her tongue, yeah, make you numb, can you run? Can you come? (Need to)
+        Yeah, fuck the sun, find the moon, find some fun (Find some, find some)
+        Yeah, hella fumes in the room, one-of-none, yeah, yeah, yeah
+    
+        [Verse 2]
+        Highest one (It's lit)
+        Talkin' that smoke, nigga, might dirty your lungs (Ah), yeah
+        Eighteen carats in her gums, yeah (Ice)
+        Said you wan' feel some', put that on your tongue, yeah (Let's go, yeah)
+        713 that code, 456, I roll (Four-by-)
+        Four-by-four I swerve, five percent, tint windows (Shit, I swerve, skrrt, skrrt)
+        Gotta be tens at least, I one v. three these hoes (One v. three)
+        And they love takin' us up, they scrape it right out of the bowl (Out of the pot)
+        Got plenty of zaza, we takin' 'em high (Let's go)
+        He wanna just smoke with La Flame, but don't wanna hotbox (It's lit)
+        What's in my cup? It's pink, I crush my valentines (Straight up)
+        Said, "Do you love me, bae?" I need to know (Ah)
+
+        [Chorus]
+        Four-by-four, I tint my windows up (Windows up), yeah
+        Damn, lil' bro, he did it, one-and-done (One-and–, one-and-done), yeah
+        Out my closet, that shit none-of-none (None-of-none), yeah
+        That's a vibe, that's a one-of-one (Vibe), yeah
+        Fill her tongue (Tongue), yeah, make you numb, can you run? Can you come?
+        Girl, fuck the sun, find the moon, find some fun (Fun)
+        Yeah, hella fumes in the room, one-of-none (One), yeah, yeah, yeah
+
+        [Instrumental Outro]
+    </pre>
+
+    <h3 id="yellow"><strong>Position and Align Text</strong></h3>
+    <ul>
+        <li>The align attribute used with many elements, will allow you to position text (or images) at the left, center or right
+            of a pages</li>
+        <li>In the case of paragraph, justify is added in the list of text positioning.</li>
+    </ul>
+    <p style="text-align: justify;">In today's fast-paced world, technology plays a pivotal role in shaping our daily lives. 
+        The advent of smartphones and the internet has revolutionized the way we communicate, access information, 
+        and conduct business. Social media platforms have connected people across the globe, fostering a sense of global 
+        community and enabling the rapid dissemination of news and ideas. However, this increased connectivity also brings 
+        challenges such as privacy concerns and the spread of misinformation. As we continue to integrate technology into 
+        our lives, it becomes essential to strike a balance between convenience and security. Education systems have also 
+        evolved, incorporating digital tools to enhance learning experiences and accessibility. Online courses and virtual 
+        classrooms have made education more inclusive, breaking down geographical barriers and providing opportunities for 
+        lifelong learning. Moreover, advancements in artificial intelligence and automation are transforming various 
+        industries, leading to increased efficiency and productivity. Nevertheless, these technological advancements raise 
+        ethical questions about the future of work and the potential displacement of jobs. As we navigate this digital era, 
+        it is crucial to remain mindful of the impact technology has on society and work towards creating a sustainable, 
+        equitable future for all.</p>
+</body>
+</html>

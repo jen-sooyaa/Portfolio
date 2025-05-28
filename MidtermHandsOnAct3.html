@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Data Sheet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Chewy&family=Chicle&family=DM+Serif+Text:ital@0;1&family=Delius&family=DynaPuff:wght@400..700&family=Freckle+Face&family=Slackey&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Chewy&family=Chicle&family=DM+Serif+Text:ital@0;1&family=Delius&family=DynaPuff:wght@400..700&family=Freckle+Face&family=Poiret+One&family=Slackey&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MidtermHandsOnAct3.css">
+    <link href="https://fonts.cdnfonts.com/css/varuna" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="sub-container">
+          <img src="logo.png" alt="University Logo" title="Erin University" class="logo">
+        </div>
+        <div class="form-header">
+            <h2>Erin University &#8212; Manila</h2>
+            <p><strong>Enrollment System</strong></p>
+            <h2>Personal Data Sheet</h2>
+            <p><em>(Graduate School, Law, Medicine)</em></p>
+        </div>
+        <div class="program">
+            <strong style="font-family: 'VARUNA', sans-serif;">Program:</strong><input type="text" name="program">
+            <br><br><br><br>
+            <strong style="font-family: 'VARUNA', sans-serif;">Student #:</strong><input type="text" name="student_number">
+        </div>
+    </div>
+    <div class="container">
+        <div class="line-field-row">
+            <div class="line-field">
+              <input type="text" name="surname">
+              <label>SURNAME</label>
+            </div>
+            <div class="line-field">
+              <input type="text" name="given_name">
+              <label>GIVEN NAME</label>
+            </div>
+            <div class="line-field">
+              <input type="text" name="middle_name">
+              <label>MIDDLE NAME</label>
+            </div>
+            <div class="line-field">
+              <input type="text" name="aux_name">
+              <label>AUXILIARY NAME<br><span class="aux-label">(Sr, Jr, I, II, III, etc)</span></label>
+            </div>
+          </div>
+    </div>
+
+    <div class="deets"><strong>STUDENT DETAILS:</strong></div>
+    
+    <div class="container">
+        <div class="city-address">
+            <label>City Address:</label><input type="text" name="city_address">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="student-details">
+            <label>Zip Code:</label><input type="text" name="zip1">
+            <label>Tel. No.:</label><input type="tel" name="tel1">
+            <label>Email address:</label><input type="email" name="email">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="home-address">
+            <label>Home Address:</label><input type="text" name="home_address">
+        </div>
+    </div>
+
+    <div class="two-col-form">
+        <!-- Left Column -->
+        <div class="form-col">
+          <div class="form-row">
+            <div class="form-label">Zip Code</div>
+            <div class="colon">:</div>
+            <input type="text" name="zip2" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">Birthday</div>
+            <div class="colon">:</div>
+            <input type="date" name="birthday" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">Birthplace</div>
+            <div class="colon">:</div>
+            <input type="text" name="birthplace" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">Citizenship</div>
+            <div class="colon">:</div>
+            <input type="text" name="citizenship" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">If Alien, ACR #</div>
+            <span class="form-note">(see Registrar)</span>
+            <div class="colon">:</div>
+            <input type="text" class="form-input">
+          </div>
+        </div>
+      
+        <!-- Right Column -->
+        <div class="form-col">
+          <div class="form-row">
+            <div class="form-label">Region</div>
+            <div class="colon">:</div>
+            <input type="text" name="region" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">Age</div>
+            <div class="colon">:</div>
+            <input type="number" name="age" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">Religion</div>
+            <div class="colon">:</div>
+            <input type="text" name="religion" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">Sex</div>
+            <div class="colon">:</div>
+            <input type="text" name="sex" class="form-input">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="section-title">Legal Status:</div>
+        </div>
+        <div class="column">
+          <div class="section-title">Civil Status:</div>
+        </div>
+      </div>
+    
+      <!-- Row for checkbox content -->
+      <div class="row">
+        <!-- Legal Status Options -->
+        <div class="column">
+          <div class="checkbox-group">
+            <label><input type="checkbox"> Citizen of RP</label>
+            <label><input type="checkbox"> Permanent Resident</label>
+            <label>
+              <input type="checkbox"> Person granted permission to enter and <br>
+              <span class="indent">remain as a student in RP on a visa for</span><br>
+              <span class="indent">a defined period of time</span>
+            </label>
+            <label>
+              <input type="checkbox"> Person granted permission to enter and <br>
+              <span class="indent">remain as a child or spouse of a worker</span><br>
+              <span class="indent">on a visa for a defined period of time</span>
+            </label>
+            <label><input type="checkbox"> Other visa</label>
+            <label><input type="checkbox"> Legal status not known</label>
+          </div>
+        </div>
+    
+        <!-- Civil Status Options -->
+        <div class="column">
+          <div class="checkbox-group">
+            <label><input type="checkbox"> Single</label>
+            <label><input type="checkbox"> Married</label>
+            <label><input type="checkbox"> Divorced</label>
+            <label><input type="checkbox"> Widowed</label>
+            <label><input type="checkbox"> Separated</label>
+          </div>
+    
+          <div class="working-row">
+            <label><input type="checkbox"> Working</label>
+            <label><input type="checkbox"> Not working</label>
+          </div>
+    
+          <div class="tel-row">
+            <label>If working: Office/Bus. Tel. # :</label>
+            <input type="text" name="office_tel">
+          </div>
+        </div>
+      </div>
+
+    <div class="parent-row">
+        <div class="father"><strong>FATHER'S INFORMATION:</strong></div>
+        <div class="mother"><strong>MOTHER'S INFORMATION:</strong></div>
+    </div>
+
+
+      <div class="two-col-form">
+        <!-- Left Column -->
+        <div class="form-col">
+          <div class="form-row">
+            <div class="form-label">Surname</div>
+            <div class="colon">:</div>
+            <input type="text" name="father_surname" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">First Name</div>
+            <div class="colon">:</div>
+            <input type="text" name="father_firstname" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">Middle Name</div>
+            <div class="colon">:</div>
+            <input type="text" name="father_middlename" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">Auxiliary Name</div>
+            <div class="colon">:</div>
+            <input type="text" name="father_auxiliaryname" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">Occupation/ Employment</div>
+            <div class="colon">:</div>
+            <input type="text" name="father_occupation" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">Educational Attainment</div>
+            <div class="colon">:</div>
+            <input type="text" name="father_education" class="form-input">
+          </div>
+        </div>
+      
+        <!-- Right Column -->
+        <div class="form-col">
+            <div class="form-row">
+              <div class="form-label">Surname</div>
+              <div class="colon">:</div>
+              <input type="text" name="mother_surname" class="form-input">
+            </div>
+            <div class="form-row">
+              <div class="form-label">First Name</div>
+              <div class="colon">:</div>
+              <input type="text" name="mother_firstname" class="form-input">
+            </div>
+            <div class="form-row">
+              <div class="form-label">Middle Name</div>
+              <div class="colon">:</div>
+              <input type="text" name="mother_middlename" class="form-input">
+            </div>
+            <div class="form-row">
+              <div class="form-label">Auxiliary Name</div>
+              <div class="colon">:</div>
+              <input type="text" name="mother_auxiliaryname" class="form-input">
+            </div>
+            <div class="form-row">
+              <div class="form-label">Occupation/ Employment</div>
+              <div class="colon">:</div>
+              <input type="text" name="mother_occupation" class="form-input">
+            </div>
+            <div class="form-row">
+              <div class="form-label">Educational Attainment</div>
+              <div class="colon">:</div>
+              <input type="text" name="mother_education" class="form-input">
+            </div>
+          </div>
+      </div> 
+      
+    <div class="container">
+        <div class="parent-address">
+            <label>Parent's Address:</label><input type="text" name="parents_address">
+        </div>
+    </div>
+
+    <div class="two-col-form">
+        <!-- Left Column -->
+        <div class="form-col">
+          <div class="form-row">
+            <div class="form-label">Zip Code</div>
+            <div class="colon">:</div>
+            <input type="text" name="parents_zip" class="form-input">
+          </div>
+        </div>
+      
+        <!-- Right Column -->
+        <div class="form-col">
+            <div class="form-row">
+              <div class="form-label">Parent's Tel. #</div>
+              <div class="colon">:</div>
+              <input type="text" name="parents_tel" class="form-input">
+            </div>
+          </div>
+      </div> 
+
+    <div class="guardian"><strong>GUARDIAN'S INFORMATION:</strong></div>
+
+    <div class="two-col-form">
+        <!-- Left Column -->
+        <div class="form-col">
+          <div class="form-row">
+            <div class="form-label">Surname</div>
+            <div class="colon">:</div>
+            <input type="text" name="guardian_surname" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">First Name</div>
+            <div class="colon">:</div>
+            <input type="text" name="guardian_firstname" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">Middle Name</div>
+            <div class="colon">:</div>
+            <input type="text" name="guardian_middlename" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">Auxiliary Name</div>
+            <div class="colon">:</div>
+            <input type="text" name="guardian_auxiliaryname" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">Occupation/ Employment</div>
+            <div class="colon">:</div>
+            <input type="text" name="guardian_occupation" class="form-input">
+          </div>
+          <div class="form-row">
+            <div class="form-label">Off./Bus. Tel. #</div>
+            <div class="colon">:</div>
+            <input type="text" name="guardian_busTel" class="form-input">
+          </div>
+        </div>
+      
+        <!-- Right Column -->
+        <div class="form-col">
+            <div class="form-row">
+              <div class="form-label">Guardian's Address</div>
+              <div class="colon">:</div>
+              <input type="text" name="guardian_address" class="form-input">
+            </div>
+            <br><br>
+            <div class="form-row">
+              <div class="form-label">Zip Code</div>
+              <div class="colon">:</div>
+              <input type="text" name="guardian_zip" class="form-input">
+            </div>
+            <br><br>
+            <div class="form-row">
+              <div class="form-label">Tel. #</div>
+              <div class="colon">:</div>
+              <input type="text" name="guardian_tel" class="form-input">
+            </div>
+          </div>
+      </div> 
+</body>
+</html>

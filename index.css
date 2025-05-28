@@ -1,0 +1,146 @@
+body {
+    background-image: url("https://images6.alphacoders.com/860/860645.png");
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    flex-direction: column;
+}
+
+.sub-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    border-radius: 10px;
+}
+
+li {
+    float: left;
+}
+    
+li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 40px;
+    font-family: 'New Super Mario Font U', sans-serif;                                          
+}
+    
+li a:hover {
+    background-color: #111111;
+}
+
+.sub-container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    flex-direction: column;
+}
+
+.sub-container1 img {
+    margin-top: 30px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#blue, #yellow, #red, #green {
+    display: flex;
+    align-items: center;
+    font-family: 'New Super Mario Font U', sans-serif;
+    font-size: 60px;
+    -webkit-text-stroke: 0.5px black; 
+}
+
+h1 {
+    font-family: 'New Super Mario Font U', sans-serif;
+    font-size: 60px;
+}
+
+#blue { 
+    color: blue; }
+#yellow { 
+    color: yellow; }
+#red { 
+    color: red; }
+#green { 
+    color: green; }
+
+#header1 {
+    width: 50px; 
+    height: auto;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.socials {
+    height: 80px;
+    width:400px;
+    margin: 30px auto;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    background-color: rgb(174, 83, 34);
+    border: solid black 1px;
+}
+
+.socials img {
+    width: 40px;  
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.socials img:hover {
+    transform: scale(1.2);
+}
+
+.box {
+    margin-top: 40px;
+    width: 90%;
+    max-width: 700px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #FFFCEF;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.box h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.name-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

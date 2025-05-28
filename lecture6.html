@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 6</title>
+    <link rel="stylesheet" href="lecture6.css">
+    <link href="https://fonts.cdnfonts.com/css/new-super-mario-font-u" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/varuna" rel="stylesheet">
+</head>
+<body>
+    <div class="name-title">
+        <h1 id="blue">L</h1>
+        <h1 id="yellow">E</h1>
+        <h1 id="red">C</h1>
+        <h1 id="green">T</h1>
+        <h1 id="blue">U</h1>
+        <h1 id="yellow">R</h1>
+        <h1 id="red" style="margin-right: 15px;">E</h1>
+        <h1 id="blue">N</h1>
+        <h1 id="yellow">O</h1>
+        <h1 id="red" style="margin-right: 15px;">:</h1>
+        <h1 id="green">6</h1>
+    </div>
+    <h2 id="blue">Topic: Forms and Multimedia Elements</h2>
+    <h3 id="yellow"><strong>Web Forms</strong></h3>
+        <ul>
+            <li>are interactive elements on web pages that allow users to input data, such as text, choices, or selections, and
+                submit it for processing.</li>
+        </ul>
+    <h3 id="red"><strong>Parts of a Web Form</strong></h3>
+    <p>A form contains controls,also known as widgets,which are the objects that allow the user to interact with the
+        form.HTML supports several types of controls and widgets,including; <br><br>
+        <strong>Controls</strong></p>
+        <ul>
+            <li><strong>input boxes</strong> for inserting text strings and numeric values</li>
+            <li><strong>option buttons</strong>, also called radio buttons,for selecting data values from a small predefined set of options</li>
+            <li><strong>selection lists</strong> for selecting data values from a more extensive list of options</li>
+            <li><strong>check boxes</strong> for selecting data values limited to two possibilities,such as "yes"or"no"</li>
+            <li><strong>text area boxes</strong> for entering text strings that may include several lines of content</li>
+        </ul>
+    <p><strong>Widgets</strong></p>
+        <ul>
+            <li><strong>spin boxes</strong> for entering integer values confined to a specified range</li>
+            <li><strong>slider controls</strong> for entering numeric values confined to a specified range</li>
+            <li><strong>calendar controls</strong> for selecting date and time values</li>
+            <li><strong>color pickers</strong> for choosing color values</li>
+        </ul>
+    <p><strong>Form Fundamentals</strong></p>
+        <ul><li>are composed of one or more text-input boxes, clickable buttons, multiple-choice checkboxes, and even pull-
+            down menus and image maps, all placed inside the &lt;form&gt; tag</li></ul>
+    <h3 id="green"><strong>The &lt;form&gt; Tag</strong></h3>
+    <table>
+        <tr>
+            <td>Function</td>
+            <td>Defines a form</td>
+        </tr>
+        <tr>
+            <td>Attributes</td>
+            <td>accept, action, charset, class, dir, enctype, id, lang, method, name, onClick, onDblClick,
+                onKeyDown, onKeyPress, onKeyUp, onMouseDown, onMouseMove, onMouseOut,
+                onMouseOver, onMouseUp, onReset, onSubmit, style, target, title</td>
+        </tr>
+        <tr>
+            <td>End tag</td>
+            <td>&lt;/form&gt;; never omitted</td>
+        </tr>
+        <tr>
+            <td>Contains</td>
+            <td>form_content</td>
+        </tr>
+        <tr>
+            <td>Used in</td>
+            <td>block</td>
+        </tr>
+    </table>
+    <p>The &lt;input&gt; Element</p>
+        <ul>
+            <li>The &lt;input&gt; element is the most important form element.</li>
+            <li>The &lt;input&gt; element can be displayed in several ways, depending on the type attribute.</li>
+        </ul>
+    <table>
+        <th>Type</th>
+        <th>Description</th>
+        <tr>
+            <td>&lt;input type="text"&gt;</td>
+            <td>Defines a one-line text input field</td>
+        </tr>
+        <tr>
+            <td>&lt;input type="radio"&gt;</td>
+            <td>Defines a radio button (for selecting one of many choices)</td>
+        </tr>
+        <tr>
+            <td>&lt;input type="submit"&gt;</td>
+            <td>Defines a submit button (for submitting the form)</td>
+        </tr>
+    </table> <br>
+    <h3 id="blue"><strong>Text Input</strong></h3>
+    <p>&lt;input type="text"&gt; defines a one-line input field for <strong>text input</strong>: <br>
+        <strong>Syntax:</strong> <br><br>
+        &lt;input type="text" id="text-box-identifier" <br>
+        placeholder="user-entry-description" <br>
+        size="box-width" maxlength="maximum-typed-characters"&gt;</p>
+    <p><strong>Example:</strong></p>
+    <form style="color: rgb(161, 0, 0);">
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br><br>
+
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+    </form>
+    <p><strong>Note: The form itself is not visible. Also note that the default width of a text field is 20 characters.</strong></p>
+    <h3 id="yellow"><strong>The &lt;label&gt; Element</strong></h3>
+        <ul>
+            <li>The &lt;label&gt; tag defines a label for many form elements.</li>
+            <li>The &lt;label&gt; element is useful for screen-reader users, because the screen-reader will read out loud the label
+                when the user focuses on the input element</li>
+            <li>The &lt;label&gt; element also helps users who have difficulty clicking on very small regions (such as radio buttons or
+                checkboxes) - because when the user clicks the text within the &lt;label&gt; element, it toggles the radio
+                button/checkbox</li>
+            <li>The for attribute of the &lt;label&gt; tag should be equal to the id attribute of the &lt;input&gt; element to bind them
+                together</li>
+        </ul>
+    <h3 id="red"><strong>The action attribute</strong></h3>
+        <ul>
+            <li>The required action attribute for the <form> tag gives the URL of the application that is to receive and process the form's data. <br>
+                Syntax: <br>
+                A typical &lt;form&gt; tag with the action attribute looks like this: <br><br>
+                &lt;form action="/action_page.php"&gt;</li>
+        </ul>
+    <p><strong>NOTE: If the action attribute is omitted, the action is set to the current page.</strong></p>
+    <h3 id="green"><strong>Target Attribute</strong></h3>
+        <ul>
+            <li>The target attribute specifies if the submitted result will open in a new browser tab, a frame, or in the current window.</li>
+            <li>The default value is "_self" which means the form will be submitted in the current window.</li>
+            <li>To make the form result open in a new browser tab, use the value "_blank": <br>
+                Example: <br><br>
+                <strong>&lt;form action="/action_page.php" target="_blank"&gt;</form></strong></li> <br>
+            <li>Other legal values are "_parent", "_top", or a name representing the name of an iframe.</li>
+        </ul>
+    <h3 id="blue"><strong>The method Attribute</strong></h3>
+        <ul>
+            <li>This attribute for the &lt;form&gt; tag sets the method by which the browser sends the form's data to the server for
+                processing. There are two ways: the POST method and the GET method. If method is not specified, GET is used. <br>
+                Example <br><br>
+                &lt;form action="/action_page.php" <strong>method="get"&gt;&lt;/form&gt;</strong> <br><br>
+                &lt;form action="/action_page.php" <strong>method="post"&gt;&lt;/form&gt;</strong></li> 
+        </ul>
+    <h3 id="yellow"><strong>The POST and GET method</strong></h3>
+        <ul>
+            <li>With the POST method, the browser sends the data in two steps: the browser first contacts the forms-
+                processing server specified in the action attribute and then, once contact is made, sends the data to the server
+                in a separate transmission.</li>
+            <li>The GET method, on the other hand, contacts the forms-processing server and sends the form data in a single
+                transmission step: the browser appends the data to the form's action URL, separated by the question mark
+                character.</li>
+            <li>Which one should you use if your forms-processing server supports both the POST and GET methods? Here are
+                some rules of thumb:</li>
+                <ul>
+                    <li>For best form-transmission performance, send small forms with a few short fields via the GET method.</li>
+                    <li>Because some server operating systems limit the number and length of command-line arguments that
+                        can be passed to an application at once, use the POST method to send forms that have many fields or
+                        that have long text fields.</li>
+                </ul>
+            <li>If you are inexperienced in writing server-side forms-processing applications, choose GET. The extra steps
+                involved in reading and decoding POST-style transmitted parameters, while not too difficult, may be more than
+                you are willing to tackle.</li>
+            <li>If security is an issue, choose POST. GET places the form parameters directly in the application URL, where they
+                easily can be captured by network sniffers or extracted from a server logfile. If the parameters contain sensitive
+                information like credit card numbers, you may be compromising your users without their knowledge. While
+                POST applications are not without their security holes, they can at least take advantage of encryption when
+                transmitting the parameters as a separate transaction with the server.</li>
+        </ul>
+    <h3 id="red"><strong>Name Attribute</strong></h3>
+        <ul>
+            <li>Each input field must have a name attribute to be submitted.</li>
+            <li>If the name attribute is omitted, the data of that input field will not be sent at all. <br>
+                Example: <br><br>
+                &lt;form action="/action_page.php"&gt; <br>
+                &nbsp;&nbsp; &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp; &lt;input type="text" id="fname" value="Nicole"&gt;&lt;br&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp; &lt;input type="submit" value="Submit"&gt; <br>
+                &lt;/form&gt; </li>
+        </ul>
+        <p>Output:</p>
+        <form style="color: rgb(161, 0, 0);" action="/action_page.php">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="Nicole"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+    <h3 id="green"><strong>HTML Input Types</strong></h3>
+    <h3 id="blue"><strong>Input Type Text</strong></h3>
+    <p><strong>&lt;input type="text"&gt;</strong> defines a one-line text input field. <br>
+        Example: <br><br>
+        &lt;form&gt; <br>
+        &nbsp;&nbsp; &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;label for="lname"&gt;Last name:&lt;/label&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;input type="text" id="lname" name="lname"&gt;<br>
+        &lt;/form&gt;</p>
+    <p>Output:</p>
+    <form style="color: rgb(161, 0, 0);" action="/action_page.php" method="post">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br><br>
+
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3 id="yellow"><strong>Input Type Password</strong></h3>
+    <p><strong>&lt;input type="password"&gt;</strong> defines a password field: <br>
+        Example: <br><br>
+        &lt;form&gt; <br>
+        &nbsp;&nbsp; &lt;label for="username"&gt;Username:&lt;/label&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;input type="text" id="username" name="username"&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;label for="pwd"&gt;Password:&lt;/label&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;input type="password" id="pwd" name="pwd"&gt; <br>
+        &lt;/form&gt;</p>
+    <p>Output:</p>
+    <form style="color: rgb(161, 0, 0);" action="/action_page.php" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="pwd">Password:</label><br>
+        <input type="password" id="pwd" name="pwd"><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+    <br>
+    <h3 id="red"><strong>Input Type Reset</strong></h3>
+    <p><strong>&lt;input type="reset"&gt;</strong> defines a reset button that will reset all form values to their default values. <br>
+        Example: <br><br>
+        &lt;form action="/action_page.php"&gt; <br>
+        &nbsp;&nbsp; &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;input type="text" id="fname" name="fname" value="Nicole"&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;label for="lname"&gt;Last name:&lt;/label&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;input type="text" id="lname" name="lname" value="Pascual"&gt;&lt;br&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;input type="submit" value="Submit"&gt; <br>
+        <strong>&nbsp;&nbsp; &lt;input type="reset" value="Reset"&gt;</strong> <br>
+        &lt;/form&gt;</p>
+    <p>Output:</p>
+    <form style="color: rgb(161, 0, 0);" action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="Nicole"><br><br>
+
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Pascual"><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+    <br>
+    <h3 id="green"><strong>Input Type Radio Buttons</strong></h3>
+        <ul>
+            <li>Radio button form controls are similar in behavior to checkboxes, except that the user can select only one in the group</li>
+            <li>Create a radio button by setting the type attribute of the &lt;input&gt; tag to radio. As with checkbox controls, radio
+                buttons each require a name and value attribute. Radio buttons with the same name are members of a group.
+                One of them may be checked by including the checked attribute with that element. If you don't check one in the
+                group, the browser does it automatically for you by checking the first element in the group</li>
+            <li>&lt;input type="radio"&gt; defines a radio button.</li>
+            <li>Radio buttons let a user select ONLY ONE of a limited number of choices: <br>
+                Example: <br><br>
+                &lt;form&gt; <br>
+                &nbsp;&nbsp; &lt;input type="radio" id=”male” name="gender" value="male" checked&gt; <br>
+                &nbsp;&nbsp; &lt;label for="male">MaleL&lt;/label&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp; &lt;input type="radio" id=”female” name="gender" value="female"&gt; <br>
+                &nbsp;&nbsp; &lt;label for="female">Female&lt;/label&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp; &lt;input type="radio" id=”other” name="gender" value="other"&gt; <br>
+                &nbsp;&nbsp; &lt;label for="other">Other&lt;/label&gt;&lt;br&gt; <br>
+                &lt;/form&gt;</li>
+        </ul>
+    <p>Output:</p>
+    <form style="color: rgb(161, 0, 0);"  action="/action_page.php" method="post">
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Male</label><br>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3 id="blue"><strong>Input Type Checkboxes</strong></h3>
+        <ul>
+            <li>The checkbox form control gives users a way to select or deselect an item quickly and easily in your form.
+                Checkboxes also may be grouped to create a set of choices, any and all of which the user may select or deselect. <br>
+                &lt;input type="checkbox"&gt; defines a checkbox. <br>
+                Checkboxes let a user select ZERO or MORE options of a limited number of choices.</li>
+        </ul>
+    <p>Example: <br><br>
+        &lt;form&gt; <br>
+        &nbsp;&nbsp; &lt;input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"&gt; <br>
+        &nbsp;&nbsp; &lt;label for="vehicle1"> I have a bike&lt;/label&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;input type="checkbox" id="vehicle2" name="vehicle2" value="Car"&gt; <br>
+        &nbsp;&nbsp; &lt;label for="vehicle2"> I have a car&lt;/label&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"&gt; <br>
+        &nbsp;&nbsp; &lt;label for="vehicle3"> I have a boat&lt;/label&gt; <br>
+        &lt;/form&gt;</p>
+    <p>Output:</p>
+    <form style="color: rgb(161, 0, 0);" action="/action_page.php" method="post">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3 id="yellow"><strong>Input Type Submit Button</strong></h3>
+        <ul>
+            <li>&lt;input type="submit"&gt; defines a button for submitting the form data to a form-handler.</li>
+            <li>The form-handler is typically a server page with a script for processing input data.</li>
+            <li>The form-handler is specified in the form's action attribute. <br>
+                <strong>Example:</strong> <br><br>
+                &lt;form action="/action_page.php"&gt; <br>
+                &nbsp;&nbsp; &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp; &lt;input type="text" id="fname" name="fname" value="Nicole"&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp; &lt;label for="lname"&gt;Last name:&lt;/label&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp; &lt;input type="text" id="lname" name="lname" value="Pascual"&gt;&lt;br&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp; &lt;input type="submit" value="Submit"&gt; <br>
+                &lt;/form&gt;</li>
+        </ul>
+    <p>Output:</p>
+    <form style="color: rgb(161, 0, 0);" action="/action_page.php" method="post">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="Nicole"><br><br>
+
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Pascual"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3 id="red"><strong>Input Type Button</strong></h3>
+        <ul>
+            <li>&lt;input type="button"&gt; defines a button: <br>
+                Example <br><br>
+                &lt;input type="button" onclick="alert('Hello World!')" value="Click Me!"&gt;</li>
+        </ul>
+    <p>Output:</p>
+    <input style="color: rgb(161, 0, 0);" type="button" onclick="alert('Hello World!')" value="Click Me!">
+    <br><br>
+    <h3 id="green"><strong>HTML5 Input Types</strong></h3>
+        <ul>
+            <li>HTML5 added several new input types:</li>
+                <ul style="list-style-type: disc;">
+                    <li>color</li>
+                    <li>date</li>
+                    <li>datetime-local</li>
+                    <li>email</li>
+                    <li>month</li>
+                    <li>number</li>
+                    <li>range</li>
+                    <li>search</li>
+                    <li>tel</li>
+                    <li>time</li>
+                    <li>url</li>
+                    <li>week</li>
+                </ul>
+        </ul>
+    <h3 id="blue"><strong>Input Type Color</strong></h3>
+    <p>The &lt;input type="color"&gt; is used for input fields that should contain a color.
+        Depending on browser support, a color picker can show up in the input field. <br>
+        Example <br><br>
+        &lt;form&gt; <br>
+        &nbsp;&nbsp; &lt;label for="favcolor"&gt;Select your favorite color:&lt;/label&gt; <br>
+        &nbsp;&nbsp; &lt;input <strong>type="color"</strong> id="favcolor" name="favcolor"&gt; <br>
+        &lt;/form&gt;</p>
+    <p>Output:</p>
+    <form style="color: rgb(161, 0, 0);" action="/action_page.php" method="post">
+    <label for="favcolor">Select your favorite color:</label>
+    <input type="color" id="favcolor" name="favcolor"><br><br>
+    </form>
+    <br>
+    <h3 id="yellow"><strong>HTML Input Attributes</strong></h3>
+    <h3 id="red"><strong>The value Attribute</strong></h3>
+    <p>The value attribute specifies the initial value for an input field: <br>
+        Example <br><br>
+        &lt;form&gt; <br>
+        &nbsp;&nbsp; &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;input type="text" id="fname" name="fname" value="Nicole"&gt;&lt;br&gt; <br>
+        &lt;/form&gt;</p>
+    <p>Output:</p>
+    <form style="color: rgb(161, 0, 0);">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="Nicole"><br>
+    </form>
+    <br>
+    <h3 id="green"><strong>The readonly Attribute</strong></h3>
+    <p>The readonly attribute specifies that the input field is read only (cannot be changed): <br>
+        Example <br><br>
+        &lt;form&gt; <br>
+        &nbsp;&nbsp; &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;input type="text" id="fname" name="fname" value="Nicole" readonly&gt; <br>
+        &lt;/form&gt;</p>
+    <p>Output:</p>
+    <form style="color: rgb(161, 0, 0);">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="Nicole" readonly>
+    </form>
+    <br>
+    <h3 id="blue"><strong>The disabled Attribute</strong></h3>
+    <p>The disabled attribute specifies that the input field is disabled. <br>
+        A disabled input field is unusable and un-clickable, and its value will not be sent when submitting the form: <br>
+        Example <br><br>
+        &lt;form&gt; <br>
+        &nbsp;&nbsp; &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;input type="text" id="fname" name="fname" value="Nicole" disabled&gt; <br>
+        &lt;/form&gt;</p>
+    <p>Output:</p>
+    <form style="color: rgb(161, 0, 0);">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="Nicole" disabled>
+    </form>
+    <br>
+    <h3 id="yellow"><strong>The size Attribute</strong></h3>
+    <p>The size attribute specifies the size (in characters) for the input field: <br>
+        Example <br><br>
+        &lt;form&gt; <br>
+        &nbsp;&nbsp; &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;input type="text" id="fname" name="fname" size="50"&gt;&lt;br&gt; <br>
+        &lt;/form&gt;</p>
+    <p>Output:</p>
+    <form style="color: rgb(161, 0, 0);">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" size="50"><br>
+    </form>
+    <br>
+    <h3 id="red"><strong>The maxlength Attribute</strong></h3>
+    <p>The maxlength attribute specifies the maximum allowed length for the input field: <br>
+        Example <br><br>
+        &lt;form&gt; <br>
+        &nbsp;&nbsp; &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt; <br>
+        &nbsp;&nbsp; &lt;input type="text" id="fname" name="fname" size="50" maxlength="50"&gt; <br>
+        &lt;/form&gt;</p>
+    <p>Output:</p>
+    <form style="color: rgb(161, 0, 0);">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" size="50" maxlength="50">
+    </form>
+    <br>
+    <p>HTML5 added the following attributes for &lt;input&gt;:</p>
+        <ul>
+            <li>autocomplete</li>
+            <li>autofocus</li>
+            <li>form</li>
+            <li>formaction</li>
+            <li>formenctype</li>
+            <li>formmethod</li>
+            <li>formnovalidate</li>
+            <li>formtarget</li>
+            <li>height and width</li>
+            <li>list</li>
+            <li>min and max</li>
+            <li>multiple</li>
+            <li>pattern (regexp)</li>
+            <li>placeholder</li>
+            <li>required</li>
+            <li>step</li>
+        </ul>
+    <p>and the following attributes for &lt;form&gt;:</p>
+        <ul>
+            <li>autocomplete</li>
+            <li>novalidate</li>
+            <li>An HTML form with autocomplete on (and off for one input field): <br>
+                &lt;form action="/action_page.php" autocomplete="on"&gt; <br>
+                &nbsp;&nbsp; &lt;label for="fname"&gt;First name:&lt;/label&gt; <br>
+                &nbsp;&nbsp; &lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp; &lt;label for="lname"&gt;Last name:&lt;/label&gt; <br>
+                &nbsp;&nbsp; &lt;input type="text" id="lname" name="lname"&gt;&lt;br&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp; &lt;label for="email"&gt;Email:&lt;/label&gt; <br>
+                &nbsp;&nbsp; &lt;input type="email" id="email" name="email" autocomplete="off"&gt;&lt;br&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp; &lt;input type="submit" value="Submit"&gt; <br>
+                &lt;/form&gt;</li>
+        </ul>
+    <p>Output:</p>
+    <form style="color: rgb(161, 0, 0);" action="/action_page.php" autocomplete="on">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" autocomplete="off"><br><br>
+
+    <input type="submit" value="Submit">
+    </form>
+    <br>
+    <h3 id="green"><strong>The &lt;select&gt; Element</strong></h3>
+    <p>The &lt;select> element defines a drop-down list: <br>
+        Example <br><br>
+        &lt;select name=“movies" id=”movies”&gt; <br>
+        &nbsp;&nbsp; &lt;option value=“Ten"&gt;Ten Things I Hate About You&lt;/option&gt; <br>
+        &nbsp;&nbsp; &lt;option value=“Fifty"&gt;Fifty First Dates&lt;/option&gt; <br>
+        &nbsp;&nbsp; &lt;option value=“Dreams"&gt;What Dreams May Come&lt;/option&gt; <br>
+        &lt;/select&gt;</p>
+    <p>Output:</p>
+    <select style="color: rgb(161, 0, 0);" name="movies" id="movies">
+    <option value="Ten">Ten Things I Hate About You</option>
+    <option value="Fifty">Fifty First Dates</option>
+    <option value="Dreams">What Dreams May Come</option>
+    </select>
+
+    <ul>
+        <li>The &lt;option&gt; elements defines an option that can be selected.</li>
+        <li>By default, the first item in the drop-down list is selected.</li>
+        <li>To define a pre-selected option, add the selected attribute to the option <br>
+            Use the size attribute to specify the number of visible values: <br>
+            Example <br><br>
+            &lt;select name="cars" size="3"&gt;</li>
+    </ul>
+    <h3 id="blue"><strong>Allow Multiple Selections</strong></h3>
+        <ul>
+            <li>Use the multiple attribute to allow the user to select more than one value: <br>
+                Example <br><br>
+                &lt;select id="cars" name="cars" size="4" multiple&gt;&lt;/select&gt;</li>
+        </ul>
+    <h3 id="yellow"><strong>The &lt;textarea&gt; Tag</strong></h3>
+        <ul>
+            <li>the &lt;textarea&gt; tag creates a multiline text-entry area in the user's browser display. In it, the user may type a
+                nearly unlimited number of lines of text. Upon submission of the form, the browser collects all the lines of text, each separated by %0D%0A (carriage return/line feed), and sends them to the server as the value of this form
+                element, using the name specified by the required name attribute.</li>
+            <li>The &lt;textarea&gt; element defines a multi-line input field (a text area): <br>
+                Example <br><br>
+                &lt;textarea id="message" name="message" rows="10" cols="30"&gt; <br>
+                &nbsp;&nbsp; The cat was playing in the garden. <br>
+                &lt;/textarea&gt;</li> <br>
+                <p>Output:</p>
+                <textarea style="color: rgb(161, 0, 0);" id="message" name="message" rows="10" cols="30">
+                The cat was playing in the garden.
+                </textarea> <br><br>
+            <li>The rows attribute specifies the visible number of lines in a text area.</li>
+            <li>The cols attribute specifies the visible width of a text area.</li>
+            <li>You can also define the size of the text area by using CSS: <br>
+                Example <br><br>
+                &lt;textarea id="message" name="message" style="width:200px; height:600px"&gt; <br>
+                &nbsp;&nbsp; The cat was playing in the garden. <br>
+                &lt;/textarea&gt;</li>
+                <p>Output:</p>
+                <textarea style="color: rgb(161, 0, 0);" id="message" name="message" style="width:200px; height:600px">
+                The cat was playing in the garden.
+                </textarea>
+
+        </ul>
+    <h3 id="red"><strong>The &lt;fieldset&gt; and &lt;legend&gt; Elements</strong></h3>
+        <ul>
+            <li>The &lt;fieldset&gt; element is used to group related data in a form.</li>
+            <li>The &lt;legend&gt; element defines a caption for the &lt;fieldset&gt; element. <br>
+                Example: <br><br>
+                &lt;form action="/action_page.php"&gt; <br>
+                &nbsp;&nbsp; &lt;fieldset&gt; <br> 
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;legend&gt;Personal Information:&lt;/legend&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;input type="text" id="fname" name="fname" value="Nicole"&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;label for="lname"&gt;Last name:&lt;/label&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;input type="text" id="lname" name="lname" value="Pascual"&gt;&lt;br&gt;&lt;br&gt; <br>
+                &nbsp;&nbsp;&nbsp;&nbsp; &lt;input type="submit" value="Submit"&gt; <br>
+                &nbsp;&nbsp; &lt;/fieldset&gt; <br>
+                &lt;/form&gt;</li>
+                <p>Output:</p>
+                <form style="color: rgb(161, 0, 0);" action="/action_page.php">
+                <fieldset>
+                    <legend>Personal Information:</legend>
+                    <label for="fname">First name:</label><br>
+                    <input type="text" id="fname" name="fname" value="Nicole"><br><br>
+                    
+                    <label for="lname">Last name:</label><br>
+                    <input type="text" id="lname" name="lname" value="Pascual"><br><br>
+                    
+                    <input type="submit" value="Submit">
+                </fieldset>
+                </form>
+        </ul>
+    <h3 id="green"><strong>Creating Effective Forms</strong></h3>
+    <h3 id="blue"><strong>Browser Constraints</strong></h3>
+        <ul><li>Make sure your forms assist users as much as possible. For example, adjust the size of text-input fields
+            to give clues on acceptable input; five-character (or nine-character) zip codes, for instance. Use
+            checkboxes, radio buttons, and selection lists whenever possible to narrow the list of choices the user
+            must make.</li></ul>
+    <h3 id="yellow"><strong>Handling Limited Displays</strong></h3>
+            <ul><li>You should structure your form to scroll naturally into two or three logical sections. The user can fill out
+                the first section, page down; fill out the second section, page down; and so forth</li>
+                <li>You should also avoid wide input elements. It is difficult enough to deal with a scrolling text field or text
+                area without having to scroll the document itself horizontally to see additional portions of the input
+                element</li></ul>
+    <h3 id="red"><strong>User-Interface Considerations</strong></h3>
+        <ul><li>A good form accommodates all three of these perceptive needs. Input elements should be organized in
+            logical groups so that your brain can process the form layout in chunks of related fields. Consistent, well-
+            written prompts and supporting text assist and lead the user to enter the correct information. Text
+            prompts also remind users of the task at hand and reinforce the form's goal</li></ul>
+    <h3 id="green"><strong>Creating Forms That Flow</strong></h3>
+        <ul><li>Your forms should lead the user naturally through the process of supplying the necessary data for the
+            application. You wouldn't ask for a street address before asking for the user's name; other rules may
+            dictate the ordering of other groups of input elements. To see whether your form really works, make
+            sure you view it on several browsers and have several people fill it out and comment on its effectiveness</li></ul>
+    <h3 id="blue"><strong>HTML Multimedia</strong></h3>
+        <ul><li>Multimedia on the web is sound, music, videos, movies, and animations</li>
+            <li>Web pages often contain multimedia elements of different types and formats.</li></ul>
+    <h3 id="yellow"><strong>Browser Support</strong></h3>
+        <ul><li>The first web browsers had support for text only, limited to a single font in a single color.</li>
+            <li>Later came browsers with support for colors and fonts, and images!</li>
+            <li>Audio, video, and animation have been handled differently by the major browsers. Different formats have been
+                supported, and some formats require extra helper programs (plug-ins) to work.</li></ul>
+    <h3 id="red"><strong>Multimedia Formats</strong></h3>
+        <ul><li>Multimedia elements (like audio or video) are stored in media files.</li>
+            <li>The most common way to discover the type of a file, is to look at the file extension.</li>
+            <li>Multimedia files have formats and different extensions like: .swf, .wav, .mp3, .mp4, .mpg, .wmv, and .avi</li></ul>
+    <h3 id="green"><strong>Audio</strong></h3>
+    <p>Audio Formats</p>
+    <table>
+        <th>Format</th>
+        <th>File</th>
+        <th>Description</th>
+        <tr>
+            <td>MIDI</td>
+            <td>.mid <br> .midi</td>
+            <td>MIDI (Musical Instrument Digital Interface). Main format for all electronic music devices
+                like synthesizers and PC sound cards. MIDI files do not contain sound, but digital notes
+                that can be played by electronics. Plays well on all computers and music hardware, but
+                not in web browsers.</td>
+        </tr>
+        <tr>
+            <td>AAC</td>
+            <td>.aac</td>
+            <td>AAC (Advanced Audio Coding). Developed by Apple as the default format for iTunes. Plays well on Apple computers, but not in web browsers.</td>
+        </tr>
+        <tr>
+            <td>Ogg</td>
+            <td>.ogg</td>
+            <td>Ogg. Developed by the Xiph.Org Foundation. Supported by HTML5.</td>
+        </tr>
+        <tr>
+            <td>MP3</td>
+            <td>.mp3</td>
+            <td>MP3 files are actually the sound part of MPEG files. MP3 is the most popular format for
+                music players. Combines good compression (small files) with high quality. Supported by
+                all browsers.
+                MP3 is the abbreviation for 'MPEG Audio Layer III' ('MPEG' stands for 'Motion Pictures
+                Expert Group')</td>
+        </tr>
+        <tr>
+            <td>MP4</td>
+            <td>.mp4</td>
+            <td>MP4 is a video format, but can also be used for audio. MP4 video is the upcoming video format on the internet. This leads to automatic support for MP4 audio by all browsers</td>
+        </tr>
+    </table>
+    <br>
+    <h3 id="blue"><strong>The HTML &lt;audio&gt; Element</strong></h3>
+        <ul>
+            <li>Before HTML5, audio files could only be played in a browser with a plug-in (like flash).</li>
+            <li>The HTML5 &lt;audio&gt; element specifies a standard way to embed audio in a web page.
+                Example: <br><br>
+                &lt;audio controls&gt; <br>
+                &nbsp;&nbsp; &lt;source src="RememberMe.mp3" type="audio/mpeg"&gt; <br>
+                &nbsp;&nbsp; Your browser does not support the audio element. <br>
+                &lt;/audio&gt;</li>
+                <p>Output:</p>
+                <audio controls>
+                <source src="The Weeknd - Call Out My Name (Official Audio).mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                </audio>
+
+        </ul>
+    <h3 id="yellow"><strong>Controls Attribute</strong></h3>
+        <ul>
+            <li>The controls attribute adds audio controls, like play, pause, and volume.</li>
+            <li>The &lt;source&gt; element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.</li>
+            <li>The text between the &lt;audio&gt; and &lt;/audio&gt; tags will only be displayed in browsers that do not support the &lt;audio&gt; element</li>
+        </ul>
+    <h3 id="red"><strong>HTML Audio - Browser Support</strong></h3>
+    <table>
+        <th>Browser</th>
+        <th>MP3</th>
+        <th>Wav</th>
+        <th>Ogg</th>
+        <tr>
+            <td>Internet Explorer</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Chrome</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Firefox</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Safari</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>No</td>
+        </tr>
+    </table> <br>
+    <h3 id="green"><strong>Videos</strong></h3>
+    <p>Video Formats</p>
+        <ul>
+            <li>MP4 is the format for internet video.</li>
+            <li>MP4 is recommended by YouTube.</li>
+            <li>MP4 is supported by Flash Players.</li>
+            <li>MP4 is supported by HTML5</li>
+        </ul>
+    <table>
+        <th>Format</th>
+        <th>File</th>
+        <th>Description</th>
+        <tr>
+            <td>Ogg</td>
+            <td>.ogg</td>
+            <td>Theora Ogg. Developed by the Xiph.Org Foundation. Supported by HTML5.</td>
+        </tr>
+        <tr>
+            <td>WebM</td>
+            <td>.webm</td>
+            <td>WebM. Developed by the web giants, Mozilla, Opera, Adobe, and Google. Supported by HTML5.</td>
+        </tr>
+        <tr>
+            <td>MPEG-4 or MP4</td>
+            <td>.mp4</td>
+            <td>MP4. Developed by the Moving Pictures Expert Group. Based on QuickTime. Commonly
+                used in newer video cameras and TV hardware. Supported by all HTML5 browsers.
+                Recommended by YouTube</td>
+        </tr>
+    </table>
+    <br>
+    <h3 id="blue"><strong>The HTML &lt;video&gt; Element</strong></h3>
+        <ul>
+            <li>The HTML5 &lt;video&gt; element specifies a standard way to embed a video in a web page. <br>
+                Example: <br><br>
+                &lt;video width="320" height="240" controls&gt; <br>
+                &nbsp;&nbsp; &lt;source src="Feast.mp4" type="video/mp4"&gt; <br>
+                &nbsp;&nbsp; Your browser does not support the video tag. <br>
+                &lt;/video&gt;</li>
+                <p>Output:</p>
+                <video width="320" height="240" controls>
+                <source src="The Kissing Booth.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+
+        </ul>
+    <h3 id="yellow"><strong>Controls Attribute</strong></h3>
+        <ul>
+            <li>The controls attribute adds video controls, like play, pause, and volume.</li>
+            <li>It is a good idea to always include width and height attributes. If height and width are not set, the page might flicker while the video loads.</li>
+            <li>The &lt;source&gt; element allows you to specify alternative video files which the browser may choose from. The browser will use the first recognized format</li>
+            <li>The text between the &lt;video&gt; and &lt;/video&gt; tags will only be displayed in browsers that do not support the &lt;video&gt; element</li>
+        </ul>
+    <h3 id="red"><strong>HTML &lt;video&gt; Autoplay</strong></h3>
+        <ul>
+            <li>To start a video automatically use the autoplay attribute: <br><br>
+                &lt;video width="320" height="240" autoplay&gt; <br>
+                &nbsp;&nbsp; &lt;source src="movie.mp4" type="video/mp4"&gt; <br>
+                &nbsp;&nbsp; Your browser does not support the video tag. <br>
+                &lt;/video&gt;</li>
+            <li>The autoplay attribute does not work in mobile devices.</li>
+            <p>Output:</p>
+            <video width="320" height="240" controls autoplay muted>
+            <source src="The Kissing Booth.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+
+        </ul>
+    <h3 id="green"><strong>HTML Video - Browser Support</strong></h3>
+        <ul><li>In HTML5, there are 3 supported video formats: MP4, WebM, and Ogg</li></ul>
+    <table>
+        <th>Browser</th>
+        <th>MP4</th>
+        <th>WebM</th>
+        <th>Ogg</th>
+        <tr>
+            <td>Internet Explorer</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Chrome</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Firefox</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Safari</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+    </table>
+    <br>
+    <h3 id="blue"><strong>HTML Helpers (Plug-ins)</strong></h3>
+        <ul>
+            <li>Helper applications (plug-ins) are computer programs that extend the standard functionality of a web browser.</li>
+            <li>Examples of well-known plug-ins are Java applets.</li>
+            <li>Plug-ins can be added to web pages with the &lt;object&gt; tag or the &lt;embed&gt; tag.</li>
+            <li>Plug-ins can be used for many purposes: display maps, scan for viruses, verify your bank id, etc.</li>
+            <li>To display video and audio: Use the &lt;video&gt; and &lt;audio&gt; tags.</li>
+        </ul>
+    <h3 id="yellow"><strong>The &lt;object&gt; Element</strong></h3>
+        <ul>
+            <li>The &lt;object&gt; element is supported by all browsers.</li>
+            <li>The &lt;object&gt; element defines an embedded object within an HTML document.</li>
+            <li>It is used to embed plug-ins (like Java applets, PDF readers, Flash Players) in web pages. <br>
+                Example: <br>
+                &lt;object width="400" height="200" data="banners.swf"&gt;&lt;/object&gt;</li>
+            <li>The &lt;object&gt; element can also be used to include HTML in HTML: <br>
+                Example: <br>
+                &lt;object width="100%" height="500px" data="images1.html"&gt;&lt;/object&gt;</li>
+            <li>Or images if you like: <br>
+                Example: <br>
+                &lt;object data="panda.png">&gt;&lt;/object&gt;</li>
+        </ul>
+    <h3 id="red"><strong>The &lt;embed&gt; Element</strong></h3>
+        <ul>
+            <li>The &lt;embed&gt; element is supported in all major browsers.</li>
+            <li>The &lt;embed&gt; element also defines an embedded object within an HTML document.</li>
+            <li>Web browsers have supported the &lt;embed&gt; element for a long time. However, it has not been a part of the HTML specification before HTML5. <br>
+                Example: <br>
+                &lt;embed width="400" height="50" src="banners.swf"&gt;</li>
+            <li>Note that the &lt;embed&gt; element does not have a closing tag. It cannot contain alternative text.</li>
+            <li>The &lt;embed&gt; element can also be used to include HTML in HTML: <br>
+                Example: <br>
+                &lt;embed width="100%" height="500px" src="images1.html"&gt;</li>
+            <li>Or images if you like: <br>
+                Example: <br>
+                &lt;embed src=“panda.png"&gt;</li>
+        </ul>
+</body>
+</html>

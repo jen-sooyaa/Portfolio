@@ -1,0 +1,71 @@
+body {
+    font-family: 'Delius', cursive;
+    background-image: url('GrandCarousel04.jpg');
+    background-size: cover;
+}
+table {
+    border: 1px solid darkslategrey;
+    border-collapse: collapse;
+    width: 70%;
+}
+th, td {
+    border: 1px solid darkslategrey;
+    padding: 5px;
+    font-weight: bold;
+    font-size: x-large;
+    color: darkslategrey;
+    text-align: left;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+.panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+.panel .image-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.panel img {
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.panel-content {
+    max-width: 80%;
+    background-color: rgba(56, 55, 55, 0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+h1 {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Delius', cursive;
+    color: darkslategrey;
+    text-align: center;
+}
+h2 {
+    font-size: 30px;
+    font-family: 'Delius', cursive;
+    text-align: left;
+    color: gold;
+}
+p {
+    font-size: 16px;
+    font-family: 'Delius', cursive;
+    color: whitesmoke;
+    text-align: justify;
+}

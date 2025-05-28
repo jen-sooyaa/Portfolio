@@ -1,0 +1,281 @@
+body {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: ;
+}
+
+.sub-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.logo {
+    float: left;
+    margin-top: 30px;
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 80px;
+    font-weight: bold;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.form-header { 
+    text-align: center;
+    width: 40%;
+    font-family: "DM Serif Text", serif;
+    background-color: transparent;
+}
+
+.program input {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 5.625rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid black;
+    color: black;
+    padding-left: 0.5rem;
+    padding-right: 1.125rem;
+}
+
+.sub-container-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.name input {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 5.625rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid black;
+    color: black;
+    padding-left: 0.5rem;
+    padding-right: 1.125rem;
+}
+
+.deets {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 329px;
+    font-size: large;
+}
+
+.line-field-row {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.line-field {
+    width: 25%;
+    text-align: center;
+}
+
+.line-field input {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 100%;
+    font-size: 16px;
+    padding: 5px 0;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    outline: none;
+    background: transparent;
+    color: black;
+}
+
+.line-field label {
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.aux-label {
+    font-size: 11px;
+    line-height: 1;
+}
+
+.city-address input {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 54.625rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid black;
+    color: black;
+    padding-left: 0.5rem;
+    padding-right: 1.125rem;
+    margin-bottom: 10px;
+}
+
+.student-details input {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 14.300rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid black;
+    color: black;
+    padding-left: 0.5rem;
+    padding-right: 1.125rem;
+    margin-bottom: 10px;
+}
+
+.home-address input {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 53.800rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid black;
+    color: black;
+    padding-left: 0.5rem;
+    padding-right: 1.125rem;
+    margin-bottom: 10px;
+}
+
+.two-col-form {
+    display: flex;
+    justify-content:center;
+    margin-right: 28px; 
+    gap: 49px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    margin-top: 3px;
+}
+  
+.form-col {
+    width: 28%;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-label {
+    width: 120px;
+}
+
+.colon {
+    margin-right: 10px;
+}
+
+.form-input {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 3px 0;
+    background: transparent;
+    color: black;
+}
+
+.form-note {
+    font-style: italic;
+    font-size: 14px;
+}
+
+.form-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.parent-row {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    font-size: large;
+    margin-top: 20px;
+    margin-right: 130px;
+}
+
+.parent-address input {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 52.700rem;
+    font-size: 0.8rem;
+    border-bottom: 1px solid black;
+    color: black;
+    padding-left: 0.5rem;
+    padding-right: 1.125rem;
+    margin-bottom: 10px;
+}
+
+.guardian {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 338px;
+    font-size: large;
+    margin-top: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    width: 55%;
+    margin-left: 21%;
+}
+
+.column {
+    width: 48%;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.checkbox-group .indent {
+    margin-left: 20px;
+}
+
+.working-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.tel-row {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.tel-row input {
+    border: none;
+    border-bottom: 1px solid black;
+    width: 180px;
+    margin-left: 5px;
+    background: transparent;
+    color: black;
+}
